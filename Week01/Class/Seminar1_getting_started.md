@@ -82,7 +82,7 @@ You will see the results as
 
 ## What is a Computational Graph?
 
-For equation $y = (a - b) + c * d$, the data flow shown below is called a computational graph:
+For equation <img src="https://latex.codecogs.com/svg.latex?\Large&space;y=(a-b)+c*d" title="linear" />, the data flow shown below is called a computational graph:
 
 <img  src="https://github.com/lse-st449/lectures/raw/master/Week01/Class/graphs/computational%20graphs.png"  width="650"  height="400">
 
@@ -511,7 +511,7 @@ with tf.Session() as sess:
 
 We intend to model the linear relationship between a dependent variable `y` and an independent variable `x`.
 
-Consider a simple linear regression model $y = wx + b$, where `w` is the weight and `b` is the bias.
+Consider a simple linear regression model <img src="https://latex.codecogs.com/svg.latex?\Large&space;y=wx+b" title="linear" /> , where `w` is the weight and `b` is the bias.
 
 Download `auto_insurance_in_sweden.csv` from the course repository.
 
