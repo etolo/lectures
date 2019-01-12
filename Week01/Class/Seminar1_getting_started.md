@@ -1,6 +1,6 @@
 # Seminar 1: Getting Started with Tensorflow
 
-| **Overview**                            |
+| **Seminar 1 Overview**                            |
 |--------------------------------------|
 | [Introduction to Tensorflow](#what-is-tensorflow) |
 | [Introduction to computational graph](#what-is-a-computational-graph)                  |
