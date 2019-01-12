@@ -22,7 +22,7 @@ TensorFlow is an open source Python library for machine learning research. Just 
 
 ## Tensorflow architecture
 
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar1/graphs/tf_architecture.png)
+![tf](https://github.com/lse-st449/lectures/raw/master/Week01/Class/graphs/tf_architecture.png)
 
 All Tensorflow modules and classes can be found [here](https://www.tensorflow.org/api_docs/python/tf). 
 
@@ -82,9 +82,9 @@ You will see the results as
 
 ## What is a Computational Graph?
 
-For equation <img src="https://latex.codecogs.com/svg.latex?\Large&space; y = (a - b) + c * d" title="y" />, the data flow shown below is called a computational graph:
+For equation $y = (a - b) + c * d$, the data flow shown below is called a computational graph:
 
-<img  src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar1/graphs/computational graphs.png"  width="650"  height="400">
+<img  src="https://github.com/lse-st449/lectures/raw/master/Week01/Class/graphs/computational%20graphs.png"  width="650"  height="400">
 
 Nodes are mathematical operations(e.g. `minus`, `mul`, and `add` in the graph), variables(e.g. `a`, `b`, `c` and `d`) and constants.
 
