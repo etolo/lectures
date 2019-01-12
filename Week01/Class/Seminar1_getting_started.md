@@ -3,7 +3,7 @@
 | **Seminar 1 Overview**                            |
 |--------------------------------------|
 | [Introduction to Tensorflow](#what-is-tensorflow) |
-| [Introduction to computational graph](#what-is-a-computational-graph)                  |
+| [Introduction to computational graphs](#what-is-a-computational-graph)                  |
 | [Basic oprations in Tensorflow](#basic-operations)    |
 | [Tensorflow data type](#tensorflow-dtype-vs-numpy-dtype)       |
 | [Graph building and execution](#implementation-of-your-graph)                  |                      |
