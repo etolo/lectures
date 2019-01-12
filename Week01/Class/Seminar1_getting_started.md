@@ -82,7 +82,7 @@ You will see the results as
 
 ## What is a Computational Graph?
 
-For equation $y = (a - b) + c * d$, the data flow shown below is called a computational graph:
+For equation $`y = (a - b) + c * d`$, the data flow shown below is called a computational graph:
 
 <img  src="https://github.com/lse-st449/lectures/raw/master/Week01/Class/graphs/computational%20graphs.png"  width="650"  height="400">
 
@@ -142,7 +142,7 @@ Session will also allocate memory to store the current values of variables.
 
 If you see this warning,
 
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar1/graphs/warning.PNG)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week01/Class/graphs/warning.PNG)
 
   
 
@@ -327,7 +327,7 @@ For the full list of Tensorflow data types, see [here](https://www.tensorflow.or
 
 Let's compare Tensorflow with Numpy data type in Anaconda Prompt under the environment where Tensorflow is installed,
 
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar1/graphs/dtype.PNG)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week01/Class/graphs/dtype.PNG)
 
 As you can see, TensorFlow integrates seamlessly with Numpy types.
 
@@ -511,7 +511,7 @@ with tf.Session() as sess:
 
 We intend to model the linear relationship between a dependent variable `y` and an independent variable `x`.
 
-Consider a simple linear regression model `y = wx + b`, where `w` is the weight and `b` is the bias.
+Consider a simple linear regression model $`y = wx + b`$, where `w` is the weight and `b` is the bias.
 
 Download `auto_insurance_in_sweden.csv` from the course repository.
 
@@ -531,7 +531,7 @@ files.upload()
 
 Choose a file from your computer and upload it. If successful, you will see
 
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar1/graphs/upload_file.PNG)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week01/Class/graphs/upload_file.PNG)
 
 Read data and get inputs `y` and `x` seperately,
 
@@ -547,7 +547,7 @@ Visualise the raw data:
 plt.scatter(x, y)
 ```
 
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar1/graphs/raw_data.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week01/Class/graphs/raw_data.png)
 
 ### Phase 1: Building the Graph
 
@@ -578,7 +578,7 @@ optimiser = tf.train.GradientDescentOptimizer(learning_rate=1e-4).minimize(loss)
 ```
 Sometimes you may need to modify your graph or learning rate for the optimiser after running the cell where you build it, you will run into this error:
 
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar1/graphs/reuse_error.PNG)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week01/Class/graphs/reuse_error.PNG)
 
 To solve the problem, add
 
@@ -608,7 +608,7 @@ p = np.arange(step)
 plt.plot(p, loss_list)
 ```
 
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar1/graphs/loss.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week01/Class/graphs/loss.png)
 
 #### Step 8: Plot your Results
 
@@ -628,4 +628,4 @@ plt.plot(x, y_trained, 'r')
 plt.show()
 ```
 
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar1/graphs/trained.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week01/Class/graphs/trained.png)
