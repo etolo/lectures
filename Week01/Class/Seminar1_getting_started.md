@@ -8,14 +8,7 @@
 | [Tensorflow data type](#tensorflow-dtype-vs-numpy-dtype)       |
 | [Graph building and execution](#implementation-of-your-graph)                  |                      |
 | [Example: linear regression](#linear-regression) |
-
-## External Sources
-
-- [Official Tensorflow tutorial](https://www.tensorflow.org/tutorials/)
-- [Offical Tensorflow guide for low level APIs](https://www.tensorflow.org/guide/low_level_intro)
-- [Offical Tensorflow guide for high level APIs](https://www.tensorflow.org/guide/keras)
   
-
 ## What is Tensorflow?
 
 TensorFlow is an open source Python library for machine learning research. Just like other libraries, such as Numpy and Scipy, Tensorflow is designed to make the implementation of your algorithms easier and faster.
@@ -629,3 +622,9 @@ plt.show()
 ```
 
 ![alt text](https://github.com/lse-st449/lectures/raw/master/Week01/Class/graphs/trained.png)
+
+## External Sources
+
+- [Official Tensorflow tutorial](https://www.tensorflow.org/tutorials/)
+- [Offical Tensorflow guide for low level APIs](https://www.tensorflow.org/guide/low_level_intro)
+- [Offical Tensorflow guide for high level APIs](https://www.tensorflow.org/guide/keras)
