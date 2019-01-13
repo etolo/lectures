@@ -1,6 +1,6 @@
 # Set up instructions for TensorFlow
 
-## Notebooks vs IDEs (Integrated Development Environments)
+## Notebooks vs integrated development environments
 Notebooks (Jupyter, iPython, etc) are suitable for presenting results or for smaller projects. 
 If you implement something of a magnitude beyond your coursework, you may write your code in an integrated development environment (IDE) (e.g. Pycharm and Spyder) which has better debegging tools and makes coding much more enjoyable.
 
@@ -11,7 +11,7 @@ In this course, you can use either. In addition, we will also be using Python no
 
 However, we still encourage you to set up everything on your local machine.
 
-The instructions below are for MacOS, Linux and Windows users. **Note** that setting up TensorFlow using Anaconda or virtualenv is highly recommended. You can follow the official instructions to install Anaconda [here](https://conda.io/docs/user-guide/install/index.html) and Pycharm [here](https://www.jetbrains.com/pycharm/download/#section=windows) (Community version is fine).
+The instructions below are for MacOS, Linux and Windows users. Note that setting up TensorFlow using Anaconda or virtualenv is highly recommended. You can follow the official instructions to install Anaconda [here](https://conda.io/docs/user-guide/install/index.html) and Pycharm [here](https://www.jetbrains.com/pycharm/download/#section=windows) (Community version is fine).
 
 
 ## Python environment and IDE setup with Anaconda
