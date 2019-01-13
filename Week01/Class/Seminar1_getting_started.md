@@ -1,6 +1,6 @@
 # Seminar 1: Getting started with TensorFlow
 
-**Content of this seminar**:
+**Contents**:
 * [Introduction to TensorFlow](#what-is-tensorflow) 
 * [Introduction to computational graphs](#what-is-a-computational-graph)                 
 * [Basic oprations in Tensorflow](#basic-operations)   
