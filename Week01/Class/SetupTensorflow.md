@@ -78,7 +78,7 @@ If your TensorFlow is installed successfully, you should be able to see this:
 
 ![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/version.PNG)
 
-## Configuring Conda Environment in Pycharm
+## Configuring Conda environment in Pycharm
 
 Open your Pycharm and follow the official instructions [here](https://www.jetbrains.com/help/pycharm/conda-support-creating-conda-virtual-environment.html).
 
