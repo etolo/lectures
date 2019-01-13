@@ -1,29 +1,29 @@
 # Seminar 1: Getting Started with TensorFlow
 
 **Content of this seminar**:
-* [Introduction to Tensorflow](#what-is-tensorflow) 
+* [Introduction to TensorFlow](#what-is-tensorflow) 
 * [Introduction to computational graphs](#what-is-a-computational-graph)                 
 * [Basic oprations in Tensorflow](#basic-operations)   
 * [Tensorflow data type](#tensorflow-dtype-vs-numpy-dtype)       
 * [Graph building and execution](#implementation-of-your-graph)                                       
 * [Example: linear regression](#linear-regression) 
   
-## What is Tensorflow?
+## What is TensorFlow?
 
-TensorFlow is an open source Python library for machine learning research. Just like other libraries, such as Numpy and Scipy, Tensorflow is designed to make the implementation of your algorithms easier and faster.
+TensorFlow is an open source Python library for machine learning research. Just like other libraries, such as Numpy and Scipy, TensorFlow is designed to make the implementation of a program easier and faster.
 
-## Tensorflow architecture
+## TensorFlow architecture
 
 ![tf](https://github.com/lse-st449/lectures/raw/master/Week01/Class/graphs/tf_architecture.png)
 
-All Tensorflow modules and classes can be found [here](https://www.tensorflow.org/api_docs/python/tf). 
+All TensorFlow modules and classes can be found [here](https://www.tensorflow.org/api_docs/python/tf). 
 
 
 #### Low level APIs and high level APIs
 
-You can either code in the low-level Tensorflow APIs(**Tensorflow Core**), i.e., building computational graphs and execute them in Tensorflow session, or in the high-level APIs using **Keras** and **Eager execution**. 
+You can either code in the low-level TensorFlow API (**TensorFlow Core**), i.e., building computational graphs and execute them in a TensorFlow session, or in the high-level APIs using **Keras** and **Eager execution**. 
 
-Although the high-level APIs provide a much simpler and consistent interface. it is still beneficial to learn how to use Tensorflow Core for the following reason as mentioned in the official documents:
+Although the high-level APIs provide a much simpler and consistent interface, it is still beneficial to learn how to use Tensorflow Core for the following reason as mentioned in the official documents:
 
 - Experimentation and debugging are both more straight forward when you can use low level TensorFlow operations directly.
 - It gives you a mental model of how things work internally when using the higher level APIs.
