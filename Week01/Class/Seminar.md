@@ -3,8 +3,8 @@
 **Contents**:
 * [Introduction to TensorFlow](#what-is-tensorflow) 
 * [Introduction to computational graphs](#what-is-a-computational-graph)                 
-* [Basic oprations in Tensorflow](#basic-operations)   
-* [Tensorflow data type](#tensorflow-dtype-vs-numpy-dtype)       
+* [Basic operations in Tensorflow](#basic-operations)   
+* [TensorFlow data type](#tensorflow-dtype-vs-numpy-dtype)       
 * [Graph building and execution](#implementation-of-your-graph)                                       
 * [Example: linear regression](#linear-regression) 
   
@@ -117,7 +117,7 @@ Tensor("Add:0", shape=(), dtype=float32) #NOT a number 6!
 
 This is because so far we have only built the structure of the algorithm.
 
-#### Execution Step
+#### Execution step
 
 To get the value of `y`, you will have to summon a **session** so you can launch the operations,
 
