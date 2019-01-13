@@ -1,4 +1,4 @@
-# Seminar 1: Getting Started with Tensorflow
+# Seminar 1: Getting Started with TensorFlow
 
 | **Seminar 1 Overview**                            |
 |--------------------------------------|
