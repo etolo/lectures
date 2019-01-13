@@ -35,7 +35,7 @@ Theano, Pytorch
   
 ## What is a tensor?
 
-A tensor is an n-dimensional array. A scalar is treated as a 1-dimensional tensor.
+A tensor is an n-dimensional array. A scalar is treated as a zero-dimensional tensor.
 
 You can think it as a Python list or a Numpy array but with different data types. Let us demonstrate this by an example:
 
@@ -315,7 +315,7 @@ TensorFlow takes Python natives types: boolean, numeric (int, float), and string
 
 For the full list of TensorFlow data types, see [here](https://www.tensorflow.org/api_docs/python/tf/DType).
 
-Let's compare TensorFlow with Numpy data type in Anaconda Prompt under the environment where TensorFlow is installed,
+Let's compare TensorFlow with Numpy data type in Anaconda prompt under the environment where TensorFlow is installed,
 
 ![alt text](https://github.com/lse-st449/lectures/raw/master/Week01/Class/graphs/dtype.PNG)
 
