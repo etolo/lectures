@@ -1,13 +1,12 @@
 # Seminar 1: Getting Started with TensorFlow
 
-| **Seminar 1 Overview**                            |
-|--------------------------------------|
-| [Introduction to Tensorflow](#what-is-tensorflow) |
-| [Introduction to computational graphs](#what-is-a-computational-graph)                  |
-| [Basic oprations in Tensorflow](#basic-operations)    |
-| [Tensorflow data type](#tensorflow-dtype-vs-numpy-dtype)       |
-| [Graph building and execution](#implementation-of-your-graph)                  |                      |
-| [Example: linear regression](#linear-regression) |
+**Content of this seminar:**:
+* [Introduction to Tensorflow](#what-is-tensorflow) 
+* [Introduction to computational graphs](#what-is-a-computational-graph)                 
+* [Basic oprations in Tensorflow](#basic-operations)   
+* [Tensorflow data type](#tensorflow-dtype-vs-numpy-dtype)       
+* [Graph building and execution](#implementation-of-your-graph)                                       
+* [Example: linear regression](#linear-regression) 
   
 ## What is Tensorflow?
 
