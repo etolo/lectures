@@ -620,6 +620,26 @@ plt.show()
 
 ![alt text](https://github.com/lse-st449/lectures/raw/master/Week01/Class/graphs/trained.png)
 
+## Homework: logistic regression
+Use the following code to generate data:
+```
+x1 = np.random.normal(-4, 2, 1000)
+x2 = np.random.normal(4, 2, 1000)
+xs = np.append(x1, x2)
+ys = np.asarray([0.] * len(x1) + [1.] * len(x2))
+```
+ 
+ Use the data `xs` and `ys` for training. The model is <img src="https://latex.codecogs.com/svg.latex?\Large&space;\hat{y}=S(w_1*x+w_2)" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />, where S is the sigmoid function and `w1` and `w2` are the parameters of the model. 
+ 
+ **Task**: Find the optimal parameters and plot the fitted model to the data.
+ 
+ **Hint**: 
+ - You could use `tf.sigmoid()` function in TensorFlow
+ - Use cross entropy loss: <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathcal{L}=-y\log\hat{y}-(1-y)\log(1-\hat{y})" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" /> 
+ - Use **gradient decent optimiser** with learning rate = 0.01. 
+ - The number of iterations is 1000. 
+
+
 ## References
 
 * [Official TensorFlow tutorial](https://www.tensorflow.org/tutorials/)
