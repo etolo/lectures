@@ -465,7 +465,7 @@ If you know the shape of your data, it's always a good practice to specify it in
 
 * The values declared by `tf.Variable` will be modified during training, whilst data held by `tf.placeholder` remains unchanged.
 
-#### Build the
+#### Build the graph
 
 If we declare one of the tensors in our code using `tf.placeholder`,
 
