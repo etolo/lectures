@@ -76,7 +76,7 @@ Check if TensorFlow is installed:
 ```
 If your TensorFlow is installed successfully, you should be able to see this:
 
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/version.PNG)
+![alt text](https://github.com/lse-st449/lectures/blob/master/Week01/Class/graphs/version.png)
 
 ## Configuring Conda environment in Pycharm
 
