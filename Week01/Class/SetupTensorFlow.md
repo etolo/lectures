@@ -1,4 +1,4 @@
-# Set up instructions for TensorFlow
+# Setup instructions for TensorFlow
 
 ## Notebooks vs integrated development environments
 Notebooks (Jupyter, iPython, etc) are suitable for presenting results or for smaller projects. 
