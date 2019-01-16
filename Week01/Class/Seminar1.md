@@ -633,11 +633,11 @@ ys = np.asarray([0.] * len(x1) + [1.] * len(x2))
  
  **Task**: Find the optimal parameters and plot the fitted model to the data.
  
- **Hint**: 
+ **Hints**: 
  - You could use `tf.sigmoid()` function in TensorFlow
  - Use cross entropy loss: <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathcal{L}=-y\log\hat{y}-(1-y)\log(1-\hat{y})" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" /> 
- - Use **gradient decent optimiser** with learning rate = 0.01. 
- - The number of iterations is 1000. 
+ - Use **gradient decent optimiser** with learning rate parameter equal to 0.01 
+ - Use the number of iterations equal to 1000 
 
 
 ## References
