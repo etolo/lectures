@@ -3,8 +3,8 @@
 **Contents**:
 * [Introduction to TensorFlow](#what-is-tensorflow) 
 * [Introduction to computational graphs](#what-is-a-computational-graph)                 
-* [Basic oprations in Tensorflow](#basic-operations)   
-* [Tensorflow data type](#tensorflow-dtype-vs-numpy-dtype)       
+* [Basic oprations in TensorFlow](#basic-operations)   
+* [TensorFlow data type](#tensorflow-dtype-vs-numpy-dtype)       
 * [Graph building and execution](#implementation-of-your-graph)                                       
 * [Example: linear regression](#linear-regression) 
   
@@ -35,7 +35,7 @@ Theano, Pytorch
   
 ## What is a tensor?
 
-A tensor is an n-dimensional array. A scalar is treated as a 1-dimensional tensor.
+A tensor is an n-dimensional array. A scalar is treated as a zero-dimensional tensor.
 
 You can think it as a Python list or a Numpy array but with different data types. Let us demonstrate this by an example:
 
@@ -315,7 +315,7 @@ TensorFlow takes Python natives types: boolean, numeric (int, float), and string
 
 For the full list of TensorFlow data types, see [here](https://www.tensorflow.org/api_docs/python/tf/DType).
 
-Let's compare TensorFlow with Numpy data type in Anaconda Prompt under the environment where TensorFlow is installed,
+Let's compare TensorFlow with Numpy data type in Anaconda prompt under the environment where TensorFlow is installed,
 
 ![alt text](https://github.com/lse-st449/lectures/raw/master/Week01/Class/graphs/dtype.PNG)
 
@@ -465,7 +465,7 @@ If you know the shape of your data, it's always a good practice to specify it in
 
 * The values declared by `tf.Variable` will be modified during training, whilst data held by `tf.placeholder` remains unchanged.
 
-#### Build the
+#### Build the graph
 
 If we declare one of the tensors in our code using `tf.placeholder`,
 
@@ -619,6 +619,26 @@ plt.show()
 ```
 
 ![alt text](https://github.com/lse-st449/lectures/raw/master/Week01/Class/graphs/trained.png)
+
+## Homework: logistic regression
+Use the following code to generate data:
+```
+x1 = np.random.normal(-4, 2, 1000)
+x2 = np.random.normal(4, 2, 1000)
+xs = np.append(x1, x2)
+ys = np.asarray([0.] * len(x1) + [1.] * len(x2))
+```
+ 
+ Use the data `xs` and `ys` for training. The model is <img src="https://latex.codecogs.com/svg.latex?\Large&space;\hat{y}=S(w_1*x+w_2)" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />, where S is the sigmoid function and `w1` and `w2` are the parameters of the model. 
+ 
+ **Task**: Find the optimal parameters and plot the fitted model to the data.
+ 
+ **Hint**: 
+ - You could use `tf.sigmoid()` function in TensorFlow
+ - Use cross entropy loss: <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathcal{L}=-y\log\hat{y}-(1-y)\log(1-\hat{y})" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" /> 
+ - Use **gradient decent optimiser** with learning rate = 0.01. 
+ - The number of iterations is 1000. 
+
 
 ## References
 
