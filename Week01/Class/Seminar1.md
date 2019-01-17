@@ -23,7 +23,7 @@ All TensorFlow modules and classes can be found [here](https://www.tensorflow.or
 
 You can either code in the low-level TensorFlow API (**TensorFlow Core**), i.e., building computational graphs and execute them in a TensorFlow session, or in the high-level APIs using **Keras** and **Eager execution**. 
 
-Although the high-level APIs provide a much simpler and consistent interface, it is still beneficial to learn how to use Tensorflow Core for the following reason as mentioned in the official documents:
+Although the high-level APIs provide a much simpler and consistent interface, it is still beneficial to learn how to use Tensorflow Core for the following reasons as mentioned in the official documents:
 
 * Experimentation and debugging are both more straightforward when you can use low level TensorFlow operations directly.
 * It gives you a mental model of how things work internally when using the higher level APIs.
@@ -143,7 +143,7 @@ import os
 os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
 ```
 
-The warning states that your CPU does support AVX.
+The warning states that your CPU doesn't support AVX.
 
 
 ## Basic operations
