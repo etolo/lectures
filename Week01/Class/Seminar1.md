@@ -329,9 +329,7 @@ tf.zeros([1, 2], dtype=np.float32)
 
 However, you should always use TensorFlow data type whenever possible. This is because
 
-* TensorFlow has to with Python/Numpy types, which could slow your code down
-
-* TensorFlow has to calculate the type of the array and may even have to convert it to TensorFlow type
+* TensorFlow has to calculate the type of the array and may even have to convert it to TensorFlow type, which could slow your code down
 
 * Numpy arrays are not GPU compatible.
 
