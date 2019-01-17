@@ -394,14 +394,14 @@ The reasons why we prefer `tf.get_variable` are
 
 * It will make it easier to refactor your code if you need to share variables at any time; we will revisit this point after we explain the concept of a `scope` in TensorFlow.
 
-Let's rewrite our first implementation using `tf.get_variable`:
+Assuming that, in equation <img src="https://latex.codecogs.com/svg.latex?\Large&space;y=(a-b)+c*d" title="linear" />, `a`, `b`, `c` are constant and `d` is a parameter, let's rewrite our first implementation using `tf.get_variable`:
 
 ```
 import tensorflow as tf
 
-a = tf.get_variable("a", initializer=tf.constant(3.0))
-b = tf.get_variable("b", initializer=tf.constant(2.0))
-c = tf.get_variable("c", initializer=tf.constant(1.0))
+a = tf.constant(3.0)
+b = tf.constant(2.0)
+c = tf.constant(1.0)
 d = tf.get_variable("d", initializer=tf.constant(5.0))
 
 a_minus_b = tf.subtract(a, b)
