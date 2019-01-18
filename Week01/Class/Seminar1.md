@@ -521,7 +521,7 @@ Choose a file from your computer and upload it. If successful, you will see
 
 ![alt text](https://github.com/lse-st449/lectures/raw/master/Week01/Class/graphs/upload_file.PNG)
 
-Read data and get inputs `y` and `x` seperately,
+Read data and get inputs `x` and `y` separately,
 
 ```
 df = pd.read_csv('auto_insurance_in_sweden.csv', header=0)
