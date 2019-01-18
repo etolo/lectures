@@ -394,7 +394,7 @@ The reasons why we prefer `tf.get_variable` are
 
 * It will make it easier to refactor your code if you need to share variables at any time; we will revisit this point after we explain the concept of a `scope` in TensorFlow.
 
-Assuming that, in equation <img src="https://latex.codecogs.com/svg.latex?\Large&space;y=(a-b)+c*d" title="linear" />, `a`, `b`, `c` are constant and `d` is a parameter, let's rewrite our first implementation using `tf.get_variable`:
+Assuming that, in equation <img src="https://latex.codecogs.com/svg.latex?\Large&space;y=(a-b)+c*d" title="linear" />, `a`, `b`, `c` are constants and `d` is a parameter, let's rewrite our first implementation using `tf.get_variable`:
 
 ```
 import tensorflow as tf
@@ -443,7 +443,7 @@ sess.run(tf.variables_initializer([a, b]))
 
 ## tf.placeholder
 
-`tf.placeholder` allocates storage for your data. When declaring a placeholder, you only need to specific the type and shape of the data you will feed to your model for execution.
+`tf.placeholder` allocates storage for your data. When declaring a placeholder, you only need to specify the type and shape of the data you will feed to your model for execution.
 
 ```
 tf.placeholder(dtype, shape=None, name=None)
