@@ -78,9 +78,7 @@ For equation <img src="https://latex.codecogs.com/svg.latex?\Large&space;y=(a-b)
 
 <img  src="https://github.com/lse-st449/lectures/raw/master/Week01/Class/graphs/computational%20graphs.png"  width="650"  height="400">
 
-Nodes are mathematical operations (e.g. `minus`, `mul`, and `add` in the graph), variables (e.g. `a`, `b`, `c` and `d`) and constants.
-
-Edges are tensors, i.e., your data.
+Nodes are mathematical operations (e.g. `minus`, `mul`, and `add` in the graph), variables (e.g. `a`, `b`, `c` and `d`),  constants and tensors, i.e., your data.
 
   
 ## Implementation of your graph
