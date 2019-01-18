@@ -625,7 +625,7 @@ xs = np.append(x1, x2)
 ys = np.asarray([0.] * len(x1) + [1.] * len(x2))
 ```
  
- Use the data `xs` and `ys` for training. The model is <img src="https://latex.codecogs.com/svg.latex?\Large&space;\hat{y}=\sigma(w*x+b)" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />, where <img src="https://latex.codecogs.com/svg.latex?\Large&space;\hat{y}=\sigma"/> is the sigmoid function and `w` and `b` are the parameters of the model. 
+ Use the data `xs` and `ys` for training. The model is <img src="https://latex.codecogs.com/svg.latex?\Large&space;\hat{y}=\sigma(w*x+b)" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />, where <img src="https://latex.codecogs.com/svg.latex?\Large&space;\sigma(\cdot)"/> is the sigmoid function and `w` and `b` are the parameters of the model. 
  
  **Task**: Find the optimal parameters and plot the fitted model to the data.
  
