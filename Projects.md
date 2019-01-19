@@ -2,6 +2,10 @@
 
 Here you'll find references to various resources such as research papers and blogs that may provide an inspiration for course project topics.
 
+More to be added soon.
+
+You're welcome to propose a topic not included in the list below.
+
 
 ## Image classification
 
