@@ -18,6 +18,7 @@ You're welcome to propose a topic not included in the list below.
 * Vinyals, Fortunato, and Jaitly, [Pointer networks](https://papers.nips.cc/paper/5866-pointer-networks.pdf), NIPS 2015, [fastml intro](http://fastml.com/introduction-to-pointer-networks/)
 * Vinyals, Bengio, and Kudlur, [Order matters: sequence to sequence for sets](https://arxiv.org/pdf/1511.06391.pdf), ICLR 2016
 * Heaton, Polson, and Witte, [Deep learning in finance](https://arxiv.org/pdf/1602.06561.pdf), ArXiv, 2016
+* van den Oord et al, [Wavenet: a generative model for raw audio](https://arxiv.org/pdf/1609.03499.pdf), arXiv 2016, [blog](https://deepmind.com/blog/wavenet-generative-model-raw-audio/)
 
 ## Conversational AI
 *  Conversational AI: Haixun Wang's [blog](https://medium.com/gobeyond-ai/a-reading-list-and-mini-survey-of-conversational-ai-32fceea97180)
