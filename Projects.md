@@ -1,6 +1,6 @@
 # Projects
 
-Here you'll find references to various resources such as research papers and blogs that may inspire choice of your course project topic.
+Here you'll find references to various resources such as research papers and blogs that may inspire choice of your course project topic. You may also check references provided in the lecture material.
 
 More to be added soon.
 
