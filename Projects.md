@@ -21,7 +21,9 @@ You're welcome to propose a topic not included in the list below.
 ## Conversational AI
 *  Conversational AI: Haixun Wang's [blog](https://medium.com/gobeyond-ai/a-reading-list-and-mini-survey-of-conversational-ai-32fceea97180)
 
-## Biology applications
+## Graph classification
+* Kipf and Welling, [Semi-supervised classification with graph convolutional networks](https://arxiv.org/pdf/1609.02907.pdf), ICLR 2017
+* Defferrard, Bresson, and Vandergheynst, [Convolutional neural networks on graphs with fast localized spectral filtering](https://papers.nips.cc/paper/6081-convolutional-neural-networks-on-graphs-with-fast-localized-spectral-filtering.pdf), NIPS 2016
 * Leskovec et al, [Tutorial: Deep learning for network biology](http://snap.stanford.edu/deepnetbio-ismb/) 
 
 ## Reinforcement learning
