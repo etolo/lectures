@@ -30,6 +30,9 @@ You're welcome to propose a topic not included in the list below.
 
 ## Reinforcement learning
 
+### Games
+* Atari [zoo](https://eng.uber.com/atari-zoo-deep-reinforcement-learning/)
+
 ### Combinatorial optimization
 
 * Mao et al, [Resource management with deep reinforcement learning](https://people.csail.mit.edu/alizadeh/papers/deeprm-hotnets16.pdf), Hotnets 2016
