@@ -22,12 +22,12 @@ def plot_xor(x):
 ```
 Passing our data to the plotting function, as we can see in the image below, we cannot find a linear classifier that separates the red dots from the blue dots.
 
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar2/graphs/xor_problem.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week02/Class/graphs/xor_problem.png)
 
 ### One solution
 In the lecture, we proposed this solution
 
-![](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar2/graphs/xor_solved.png)
+![](https://github.com/lse-st449/lectures/raw/master/Week02/Class/graphs/xor_solved.png)
 
 to find the optimal weights that solve the XOR problem. We are essentially searching for a mapping $\phi$ that transforms the original data into some new data that's linearly separable in the feature space.
 
@@ -38,7 +38,7 @@ Consider the linear regression example in Semiar 1.  We are fitting the model `y
 
 Similarly, the same logic applies when using neural networks.  Assume that we have built the following network for the XOR problem, which has one hidden layer with four neurons and an output layer with one neurons, 
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar2/graphs/NN.png" width="700" height="450">
+<img src="https://github.com/lse-st449/lectures/raw/master/Week02/Class/graphs/NN.png" width="700" height="450">
 
 Each forward pass takes only one data point which has a dimensionality of 2.  To find the optimal parameters for the entire dataset, we need to make sure that the same set of parameters are updated in the training process. 
 
@@ -66,7 +66,7 @@ with tf.variable_scope(scope, reuse=tf.AUTO_REUSE) as scope:
 ### Implement the neural network
 
 #### Compute the dimensionality of parameters
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar2/graphs/NN.png" width="700" height="450">
+<img src="https://github.com/lse-st449/lectures/raw/master/Week02/Class/graphs/NN.png" width="700" height="450">
 
 We see that the dimensionality of the weight matrix `D_w` and of the bias `D_b` are  <img src="https://latex.codecogs.com/svg.latex?\Large&space; D_w = [N^{(l)}, N^{(l-1)}] " title="D_w" />  and  <img src="https://latex.codecogs.com/svg.latex?\Large&space; D_b = [N^{(l)}, 1] " title="D_b" />, where `l` is the current layer and `l-1` is the previous layer. 
 
@@ -146,7 +146,7 @@ plt.title('Loss')
 plt.show
 ```
 
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar2/graphs/loss_xor.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week02/Class/graphs/loss_xor.png)
 
 We also fetch the learned`y_hat` values after the training, 
 ```
@@ -159,7 +159,7 @@ Prediction: [0. 1. 1. 0.]
 ```
 and the we can also fetch `h1` values to plot a latent representation of the original inputs:
 
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar2/graphs/xor_trained.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week02/Class/graphs/xor_trained.png)
 
 As shown and explained in Figure 6.1 (Chapter 6, p.p 168) in Deep Learning (Goodfellow, Bengio, and Courville), the two points that must have the same output have been collapsed in a single point in feature space. 
 
@@ -245,7 +245,7 @@ network.add(Dense(units=1, activation='sigmoid', kernel_initializer='uniform'))
 ann_viz(network, title="")
 ```
 
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar2/graphs/2-layer_nn.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week02/Class/graphs/2-layer_nn.png)
 
 An example with more layers and neurons,
 ```
@@ -261,7 +261,7 @@ network.add(Dense(units=1, activation='sigmoid', kernel_initializer='uniform'))
 ann_viz(network, title="")
 ```
 
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar2/graphs/multi-layer_nn.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week02/Class/graphs/multi-layer_nn.png)
 
 This library can also visualise convolutional neural networks, which can be useful for our future courses. 
 
@@ -271,9 +271,9 @@ This library can also visualise convolutional neural networks, which can be usef
 ```
 np.random.seed(1)
 ```
-- Sample 200 data points from an uniform distribution at random on the rectangle [$\gamma$/2, 1] x [-1/2, 1/2] and another 200 at random on the rectangle [-1, -$\gamma$/2] x [-1/2, 1/2], where gamma is a margin parameter that decides how closes these two classes are. See figure below for an illustration:
+- Sample 200 data points from an uniform distribution at random on the rectangle [gamma/2, 1] x [-1/2, 1/2] and another 200 at random on the rectangle [-1, -gamma/2] x [-1/2, 1/2], where gamma is a margin parameter that decides how closes these two classes are. See figure below for an illustration:
 
-![](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar2/graphs/percep_data.png)
+![](https://github.com/lse-st449/lectures/raw/master/Week02/Class/graphs/percep_data.png)
 
 ```
 gamma = 0.1  
@@ -286,7 +286,7 @@ x2 = np.random.uniform(-0.5, 0.5, size=200)
 c1 = np.squeeze(np.dstack((a1, a2)))  
 c2 = np.squeeze(np.dstack((x1, x2)))
 ```
--   Generate labels, concatenate samples in both classes and randomly shuffle them:
+- Generate labels, concatenate samples in both classes and randomly shuffle them:
 ```
 # create labels  
 y1 = np.negative(np.ones(200))  
@@ -303,18 +303,18 @@ labels = labels[randomize]
 ```
 ### Tasks
 - Plot the data in the two classes
-- Implement the perceptron learning algorithm (**slide 11-15**) in TensorFlow (with \phi = identity mapping \phi(x)=x)
--  Run the algorithm for the value of parameter $\gamma=0.1$
+- Implement the perceptron learning algorithm (**slide 11-15**) in TensorFlow (with phi = identity mapping)
+- Run the algorithm for the value of parameter gamma=0.1
 - Plot the decision boundary after training 
 - Record the total number of mistakes made by the algorithm
 
 **Hints**
 - This is online learning, meaning that you do not pass the whole dataset before making a parameter update.   The loss and parameter update are computed after each data point is passed to the computational graph. 
--   The parameter update rule is stated on **slide 15**. When assigning values to variables in TensorFlow, use 
+- The parameter update rule is stated on **slide 15**. When assigning values to variables in TensorFlow, use 
 ```
 tf.assign(ref, value, validate_shape=None, use_locking=None, name=None)
 ```
--   Stop as soon as there are no misclassified samples
+- Stop as soon as there are no misclassified samples
 - See figure below for an illustration of decision boundary:
 
-![](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar2/graphs/decision_boundary.png)
+![](https://github.com/lse-st449/lectures/raw/master/Week02/Class/graphs/decision_boundary.png)
