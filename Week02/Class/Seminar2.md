@@ -58,7 +58,7 @@ b2 = tf.get_variable("bias2", shape=[1], dtype=tf.float64, initializer=tf.consta
 ```
 we can write
 ```
-with tf.variable_scope(scope, reuse=tf.AUTO_REUSE) as scope:
+with tf.variable_scope('name_of_the_scope', reuse=tf.AUTO_REUSE) as scope:
     w = tf.get_variable("weights", [2, 2], dtype=tf.float64, initializer=tf.random_normal_initializer(stddev=0.1))
     b = tf.get_variable("bias", shape=[1, 2], dtype=tf.float64, initializer=tf.constant_initializer(0.0))
 ```
