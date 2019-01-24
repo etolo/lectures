@@ -33,7 +33,7 @@ to find the optimal weights that solve the XOR problem. We are essentially searc
 
 We will therefore create a two-layer neural network to solve the XOR problem.
 
-### Intuition for variable sharing in a neural network
+### Intuition for variable sharing when using neural networks
 Consider the linear regression example in Semiar 1.  We are fitting the model <img src="https://latex.codecogs.com/svg.latex?\Large&space;y=wx+b" title="D_w"/> to all the data points, i.e., the parameters are shared across the entire dataset.
 
 Similarly, the same logic applies when using neural networks.  Assume that we have built the following network for the XOR problem, which has one hidden layer with four neurons and an output layer with one neurons, 
