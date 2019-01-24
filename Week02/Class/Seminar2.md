@@ -43,8 +43,9 @@ Similarly, the same logic applies when using neural networks.  Assume that we ha
 Each forward pass takes only one data point which has a dimensionality of 2. To find the optimal parameters for the entire dataset, we need to make sure that the same set of parameters are updated in the training process. 
 
 ## Variable sharing in TensorFlow
+
 ### Variable scope
-Variable scope is a mechanism in Tensorflow that allows users to share variables accessed in different parts of the code. 
+Variable scope is a mechanism in TensorFlow that allows users to share variables accessed in different parts of the code. 
 ```
 tf.variable_scope(scope, reuse=None, initializer=None)
 ```
@@ -72,8 +73,9 @@ We see that the dimensionality of the weight matrix `D_w` and of the bias `D_b` 
 
 Given the dimensionalities of the weights and bias, you are now able to compute the total number of parameters of your neural network. In this example, we have 17 parameters. 
 
-Let's create a neural network to solve the XOR problem using what we have learned so far.  
-#### Create a layer in neural network
+Let's create a neural network to solve the XOR problem using what we have learned so far. 
+
+#### Create a fully connected layer
 ```
 def fully_connected_nn(x, output_dim, scope):  
     with tf.variable_scope(scope, reuse=tf.AUTO_REUSE):  
@@ -93,7 +95,7 @@ def two_layer_nn(x):
     return output
 ```
 
-#### Create the Graph and Specify the Loss Function
+#### Create the graph and specify the loss function
 Cross-entropy loss is typically used to measure the performance of a classifier that outputs a value between 0 and 1. 
 The cross-entropy loss is given by
 
@@ -163,12 +165,12 @@ and the we can also fetch `h1` values to plot a latent representation of the ori
 
 As shown and explained in Figure 6.1 (Chapter 6, p.p 168) in Deep Learning (Goodfellow, Bengio, and Courville), the two points that must have the same output have been collapsed in a single point in feature space. 
 
-## Build a Neural Network to Solve the XOR problem using Tensorflow
+## Build a neural network to solve the XOR problem using TensorFlow
 `tf.layers.dense` allows you to add a fully connected layer to your network. 
 ```
 tf.layers.dense(inputs, units, activation=None,use_bias=True, kernel_initializer=None, bias_initializer=tf.zeros_initializer(), kernel_regularizer=None, bias_regularizer=None, activity_regularizer=None, kernel_constraint=None, bias_constraint=None, trainable=True, name=None, reuse=None)
 ```
-We now rewrite our solution using Tensorflow. Firstly, define the neural network, 
+We now rewrite our solution using TensorFlow. Firstly, define the neural network, 
 ```
 def xor_network(x):  
     with tf.variable_scope('xor', reuse=tf.AUTO_REUSE) as scope:  
@@ -209,7 +211,7 @@ Output:
 ```
 Prediction: [[0.] [1.] [1.] [0.]]
 ```
-## Visualise Your Neural Networks
+## Visualise your neural networks
 You can use the library called **ANNvisualizer** to visualise your neural networks.  Unfortunately this is not yet compatible with any Python notebooks.  If you have installed a Python IDE, you can follow the instructions to install the library.  
 For Windows users, open your Anaconda Prompt and activate your virtual environment, and then install `graphviz`, `keras` and `ann_visualizer` by
 ```
@@ -265,8 +267,8 @@ ann_viz(network, title="")
 
 This library can also visualise convolutional neural networks, which can be useful for our future courses. 
 
-## Homework: Single-layer perceptron algorithm
-### Generate Input
+## Homework: single-layer perceptron algorithm
+### Generate inputs
 - Fix random seed using the following code:
 ```
 np.random.seed(1)
@@ -303,7 +305,7 @@ labels = labels[randomize]
 ```
 ### Tasks
 - Plot the data in the two classes
-- Implement the perceptron learning algorithm (**slide 11-15**) in TensorFlow (with <img src="https://latex.codecogs.com/svg.latex?\Large&space;\phi" title="D_w"/> = identity mappingm, i.e., <img src="https://latex.codecogs.com/svg.latex?\Large&space;\phi(x)=x" title="D_w"/>)
+- Implement the perceptron learning algorithm (**slide 11-15**) in TensorFlow (with <img src="https://latex.codecogs.com/svg.latex?\Large&space;\phi" title="D_w"/> = identity mapping, i.e., <img src="https://latex.codecogs.com/svg.latex?\Large&space;\phi(x)=x" title="D_w"/>)
 - Run the algorithm for the value of parameter <img src="https://latex.codecogs.com/svg.latex?\Large&space;\gamma=0.1" title="D_w"/>
 - Plot the decision boundary after training 
 - Record the total number of mistakes made by the algorithm
