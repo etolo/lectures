@@ -29,18 +29,18 @@ In the lecture, we proposed this solution
 
 ![](https://github.com/lse-st449/lectures/raw/master/Week02/Class/graphs/xor_solved.png)
 
-to find the optimal weights that solve the XOR problem. We are essentially searching for a mapping $\phi$ that transforms the original data into some new data that's linearly separable in the feature space.
+to find the optimal weights that solve the XOR problem. We are essentially searching for a mapping <img src="https://latex.codecogs.com/svg.latex?\Large&space;\phi" title="D_w"/> that transforms the original data into some new data that's linearly separable in the feature space.
 
 We will therefore create a two-layer neural network to solve the XOR problem.
 
 ### Intuition for variable sharing in a neural network
-Consider the linear regression example in Semiar 1.  We are fitting the model `y = wx + b` to all the data points, i.e., the parameters are shared across the entire dataset.
+Consider the linear regression example in Semiar 1.  We are fitting the model <img src="https://latex.codecogs.com/svg.latex?\Large&space;y=wx+b" title="D_w"/> to all the data points, i.e., the parameters are shared across the entire dataset.
 
 Similarly, the same logic applies when using neural networks.  Assume that we have built the following network for the XOR problem, which has one hidden layer with four neurons and an output layer with one neurons, 
 
 <img src="https://github.com/lse-st449/lectures/raw/master/Week02/Class/graphs/NN.png" width="700" height="450">
 
-Each forward pass takes only one data point which has a dimensionality of 2.  To find the optimal parameters for the entire dataset, we need to make sure that the same set of parameters are updated in the training process. 
+Each forward pass takes only one data point which has a dimensionality of 2. To find the optimal parameters for the entire dataset, we need to make sure that the same set of parameters are updated in the training process. 
 
 ## Variable sharing in TensorFlow
 ### Variable scope
@@ -68,7 +68,7 @@ with tf.variable_scope(scope, reuse=tf.AUTO_REUSE) as scope:
 #### Compute the dimensionality of parameters
 <img src="https://github.com/lse-st449/lectures/raw/master/Week02/Class/graphs/NN.png" width="700" height="450">
 
-We see that the dimensionality of the weight matrix `D_w` and of the bias `D_b` are  <img src="https://latex.codecogs.com/svg.latex?\Large&space; D_w = [N^{(l)}, N^{(l-1)}] " title="D_w" />  and  <img src="https://latex.codecogs.com/svg.latex?\Large&space; D_b = [N^{(l)}, 1] " title="D_b" />, where `l` is the current layer and `l-1` is the previous layer. 
+We see that the dimensionality of the weight matrix `D_w` and of the bias `D_b` are  <img src="https://latex.codecogs.com/svg.latex?\Large&space;D_w=[N^{(l)},N^{(l-1)}]" title="D_w"/>  and  <img src="https://latex.codecogs.com/svg.latex?\Large&space;D_b=[N^{(l)},1]" title="D_b"/>, where `l` is the current layer and `l-1` is the previous layer. 
 
 Given the dimensionalities of the weights and bias, you are now able to compute the total number of parameters of your neural network. In this example, we have 17 parameters. 
 
@@ -97,7 +97,7 @@ def two_layer_nn(x):
 Cross-entropy loss is typically used to measure the performance of a classifier that outputs a value between 0 and 1. 
 The cross-entropy loss is given by
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathcal{L} = -y \log(\hat{y}) - (1 - y) \log(1 - \hat{y}) " title="\Large cross-entropy" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathcal{L}=-y\log(\hat{y})-(1-y)\log(1-\hat{y})" title="\Large cross-entropy" />
 
 We implement the loss function for later use:
 ```
@@ -271,7 +271,7 @@ This library can also visualise convolutional neural networks, which can be usef
 ```
 np.random.seed(1)
 ```
-- Sample 200 data points from an uniform distribution at random on the rectangle [gamma/2, 1] x [-1/2, 1/2] and another 200 at random on the rectangle [-1, -gamma/2] x [-1/2, 1/2], where gamma is a margin parameter that decides how closes these two classes are. See figure below for an illustration:
+- Sample 200 data points from an uniform distribution at random on the rectangle [<img src="https://latex.codecogs.com/svg.latex?\Large&space;\gamma" title="D_w"/> /2, 1] x [-1/2, 1/2] and another 200 at random on the rectangle [-1, -<img src="https://latex.codecogs.com/svg.latex?\Large&space;\gamma" title="D_w"/>/2] x [-1/2, 1/2], where <img src="https://latex.codecogs.com/svg.latex?\Large&space;\gamma" title="D_w"/> is a margin parameter that decides how closes these two classes are. See figure below for an illustration:
 
 ![](https://github.com/lse-st449/lectures/raw/master/Week02/Class/graphs/percep_data.png)
 
@@ -303,13 +303,13 @@ labels = labels[randomize]
 ```
 ### Tasks
 - Plot the data in the two classes
-- Implement the perceptron learning algorithm (**slide 11-15**) in TensorFlow (with phi = identity mapping)
-- Run the algorithm for the value of parameter gamma=0.1
+- Implement the perceptron learning algorithm (**slide 11-15**) in TensorFlow (with <img src="https://latex.codecogs.com/svg.latex?\Large&space;\phi" title="D_w"/> = identity mappingm, i.e., <img src="https://latex.codecogs.com/svg.latex?\Large&space;\phi(x)=x" title="D_w"/>)
+- Run the algorithm for the value of parameter <img src="https://latex.codecogs.com/svg.latex?\Large&space;\gamma=0.1" title="D_w"/>
 - Plot the decision boundary after training 
 - Record the total number of mistakes made by the algorithm
 
 **Hints**
-- This is online learning, meaning that you do not pass the whole dataset before making a parameter update.   The loss and parameter update are computed after each data point is passed to the computational graph. 
+- This is online learning, meaning that you do not pass the whole dataset before making a parameter update. The loss and parameter update are computed after each data point is passed to the computational graph. 
 - The parameter update rule is stated on **slide 15**. When assigning values to variables in TensorFlow, use 
 ```
 tf.assign(ref, value, validate_shape=None, use_locking=None, name=None)
