@@ -39,7 +39,7 @@ In the lecture, we found this solution
 
 We essentially need to find a mapping <img src="https://latex.codecogs.com/svg.latex?\Large&space;\phi" title="D_w"/> that transforms the input points into a feature space in which the points are linearly separable.
 
-We will therefore create a depth-two neural network to solve the XOR problem.
+We will therefore create a neural network with a single hidden layer to solve the XOR problem.
 
 ### Intuition for variable sharing when using neural networks
 
