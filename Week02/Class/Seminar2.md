@@ -80,7 +80,7 @@ with tf.variable_scope('name_of_the_scope', reuse=tf.AUTO_REUSE) as scope:
 
 <img src="https://github.com/lse-st449/lectures/raw/master/Week02/Class/graphs/NN.png" width="700" height="450">
 
-We see that the dimensionality of the weight matrix `w` and of the bias `b` are  <img src="https://latex.codecogs.com/svg.latex?\Large&space;w=[N^{(l)},N^{(l-1)}]" title="D_w"/>  and  <img src="https://latex.codecogs.com/svg.latex?\Large&space;b=[N^{(l)},1]" title="D_b"/>, where `l` is index of a layer and `l-1` is the index of the preceding layer. 
+We see that the dimensionality of the weight matrix `w` and of the bias `b` are  <img src="https://latex.codecogs.com/svg.latex?\Large&space;w=[N^{(l)},N^{(l-1)}]" title="D_w"/>  and  <img src="https://latex.codecogs.com/svg.latex?\Large&space;b=[N^{(l)},1]" title="D_b"/>, where <img src="https://latex.codecogs.com/svg.latex?\Large&space;l" title="D_w"/> is index of a layer and <img src="https://latex.codecogs.com/svg.latex?\Large&space;l-1" title="D_w"/> is the index of the preceding layer. 
 
 Let's create a neural network to solve the XOR problem using what we have learned so far. 
 
