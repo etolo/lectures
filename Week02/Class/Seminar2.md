@@ -127,7 +127,8 @@ def cross_entropy(y, y_hat):
 Build the graph, 
 ```
 n_data = x.shape[0]  
-y_hat = []  
+y_hat = []
+hidden = []
   
 data_x = tf.placeholder(tf.float32, shape=[None, 2])  
 data_y = tf.placeholder(tf.float32, shape=[None, 1])  
