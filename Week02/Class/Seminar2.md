@@ -330,11 +330,11 @@ labels = labels[randomize]
 - Plot the perceptron criterion loss function versus the number of iterations (taking only the iterations at which the algorithm changes the parameter vector value)
 - Record the total number of mistakes made by the algorithm until convergence and compare with the upper bound in the lecture
 - Extra: if you're ambitious, you may also do the following:
-   - Plot the loss function versus iterations (in which the parameter vector changes) for different shufflings of the training dataset. What do you observe?
+   - Plot the loss function value versus the number of iterations (for iterations in which the parameter vector changes) for different shufflings of the training dataset. What do you observe?
    - Run the algorithm for different values of parameter <img src="https://latex.codecogs.com/svg.latex?\Large&space;\gamma" title="\gamma"/> and then plot the number of mistakes after the algorithm converged versus <img src="https://latex.codecogs.com/svg.latex?\Large&space;\gamma" title="\gamma"/>. How does the number of mistakes compare to the upper bound in the lecture notes?
 
 **Hints**
-- The single-layer perceptron learning algorithm is an online learning algorithm (of stochastic gradient descent type), meaning that you do not pass the whole dataset before making a parameter update. The loss and parameter update are computed after each input data point is passed to the computational graph. 
+- The single-layer perceptron learning algorithm is an online learning algorithm (of stochastic gradient descent type), so you should not pass the whole dataset before making a parameter update. The loss value and parameter update are computed after each input data point is passed to the computational graph. 
 -   The parameter update rule is defined in Lecture 2. When assigning values to variables in TensorFlow, use 
 ```
 tf.assign(ref, value, validate_shape=None, use_locking=None, name=None)
