@@ -578,13 +578,13 @@ at the beginning of your code in this cell.
 #### Step 6: Train the model
 
 ```
-step = 500 # total number of iterations
+steps = 500 # total number of iterations
 with tf.Session() as sess:
-sess.run(tf.global_variables_initializer())
-loss_list = []
-for i in range(step):
-    _, l = sess.run([optimiser, loss], feed_dict={data_x: x, data_y: y})
-    loss_list.append(l) # save the loss at each iteration for plot so you can visualise the training process
+    sess.run(tf.global_variables_initializer())
+    loss_list = []
+    for i in range(steps):
+        _, l = sess.run([optimiser, loss], feed_dict={data_x: x, data_y: y})
+        loss_list.append(l) # save the loss at each iteration for plot so you can visualise the training process
 ```
 
 ### Step 7: Plot the value of the loss function during training
