@@ -80,9 +80,7 @@ with tf.variable_scope('name_of_the_scope', reuse=tf.AUTO_REUSE) as scope:
 
 <img src="https://github.com/lse-st449/lectures/raw/master/Week02/Class/graphs/NN.png" width="700" height="450">
 
-We see that the dimensionality of the weight matrix `D_w` and of the bias `D_b` are  <img src="https://latex.codecogs.com/svg.latex?\Large&space;D_w=[N^{(l)},N^{(l-1)}]" title="D_w"/>  and  <img src="https://latex.codecogs.com/svg.latex?\Large&space;D_b=[N^{(l)},1]" title="D_b"/>, where `l` is index of a layer and `l-1` is the index of the preceding layer. 
-
-Given the dimensionalities of the weights and bias, you are now able to compute the total number of parameters of your neural network. In this example, we have 17 parameters. 
+We see that the dimensionality of the weight matrix `w` and of the bias `b` are  <img src="https://latex.codecogs.com/svg.latex?\Large&space;w=[N^{(l)},N^{(l-1)}]" title="D_w"/>  and  <img src="https://latex.codecogs.com/svg.latex?\Large&space;b=[N^{(l)},1]" title="D_b"/>, where `l` is index of a layer and `l-1` is the index of the preceding layer. 
 
 Let's create a neural network to solve the XOR problem using what we have learned so far. 
 
@@ -100,10 +98,10 @@ Note that the initialisation for parameters is essential.
 
 #### Define a depth-two neural network
 ```
-def two_layer_nn(x):
+def single_hidden_layer_nn(x):
     hidden_layer1 = tf.nn.relu(fully_connected_nn(x, 2, 'h1'))
     output = tf.nn.sigmoid(fully_connected_nn(hidden_layer1, 1, 'h2'))
-    return output
+    return hidden_layer1, output
 ```
 
 #### Create the graph and specify the loss function
@@ -134,13 +132,13 @@ y_hat = []
 data_x = tf.placeholder(tf.float32, shape=[None, 2])  
 data_y = tf.placeholder(tf.float32, shape=[None, 1])  
 for i in range(n_data):  
-    h1, output = two_layer_nn(tf.reshape(x[i, :], [2, 1]))  
+    h1, output = single_hidden_layer_nn(tf.reshape(x[i, :], [2, 1]))  
     y_hat.append(tf.squeeze(output)) # convert the [1, 1] tensor output to a scalar  
     hidden.append(h1)  
 loss = cross_entropy(y, y_hat)  
 optimiser = tf.train.GradientDescentOptimizer(learning_rate=1e-1).minimize(loss)
 ```
-Here we have built a neural network where `h` is the transformed data that is output of the hidden layer. 
+Here we have built a neural network where `h1` is the transformed data that is output of the hidden layer. 
 
 Execute the graph with a session:
 ```
@@ -152,13 +150,7 @@ with tf.Session() as sess:
         _, l = sess.run([optimiser, loss], feed_dict={data_x: x, data_y: y})  
         loss_list.append(l)
 ```
-Plot the loss by 
-```
-s = np.arange(n_iterations)
-plt.plot(s, loss_list)
-plt.title('Loss')
-plt.show
-```
+Plot the loss:
 
 ![alt text](https://github.com/lse-st449/lectures/raw/master/Week02/Class/graphs/loss_xor.png)
 
@@ -171,13 +163,13 @@ Output:
 ```
 Prediction: [0. 1. 1. 0.]
 ```
-and we can also fetch `h1` values to plot a hidden-layer representation of the input data points:
+and we can also fetch `hidden_layer1` values (requires the `single_hidden_layer_nn` function to return `hidden_layer1`) to plot a hidden-layer representation of the input data points:
 
 ![alt text](https://github.com/lse-st449/lectures/raw/master/Week02/Class/graphs/xor_trained.png)
 
-As shown and explained in Figure 6.1 (Chapter 6, p.p 168) in Deep Learning (Goodfellow, Bengio, and Courville), the two points that must have the same output have been collapsed in a single point in hidden-layer representation. 
+As shown and explained in Figure 6.1 (Chapter 6, p.p. 168) in Deep Learning (Goodfellow, Bengio, and Courville), the two points that must have the same output have been collapsed in a single point in hidden-layer representation. 
 
-## Build a neural network to solve the XOR problem using TensorFlow
+## Solve the XOR problem using TensorFlow layers
 
 `tf.layers.dense` allows you to add a fully connected layer to your network. 
 ```
