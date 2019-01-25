@@ -45,7 +45,7 @@ We will therefore create a neural network with a single hidden layer to solve th
 
 Consider the linear regression example in Seminar 1.  We are fitting the model <img src="https://latex.codecogs.com/svg.latex?\Large&space;y=wx+b" title="D_w"/> to all the training data points, i.e., the parameters are shared across the entire training dataset.
 
-Similarly, the same logic applies when using neural networks. Consider the following network, which has one hidden layer with four neurons and an output layer with one neuron, 
+Similarly, the same logic applies when using neural networks. Consider the following network which has one hidden layer with four neurons and an output layer with one neuron, 
 
 <img src="https://github.com/lse-st449/lectures/raw/master/Week02/Class/graphs/NN.png" width="700" height="450">
 
