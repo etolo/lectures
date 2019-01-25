@@ -555,7 +555,7 @@ b = tf.get_variable(name="bias", shape=[], dtype=tf.float64, initializer=tf.cons
 ```
 y_predicted = tf.add(tf.multiply(w, data_x), b) # tf.multiply is element-wise multiplication
 # meam squared error
-loss = tf.reduce_mean(tf.square(y - y_predicted))
+loss = tf.reduce_mean(tf.square(data_y - y_predicted))
 ```
 
 #### Step 5: Select an optimiser
