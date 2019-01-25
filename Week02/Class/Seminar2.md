@@ -37,7 +37,7 @@ In the lecture, we found this solution
 
 ![](https://github.com/lse-st449/lectures/raw/master/Week02/Class/graphs/xor_solved.png)
 
-We essentially need to find a mapping $\phi$ that transforms the input points into a feature space in which the points are linearly separable.
+We essentially need to find a mapping <img src="https://latex.codecogs.com/svg.latex?\Large&space;\phi" title="D_w"/> that transforms the input points into a feature space in which the points are linearly separable.
 
 We will therefore create a depth-two neural network to solve the XOR problem.
 
@@ -283,7 +283,7 @@ This library can also visualise convolutional neural networks, which may be usef
 np.random.seed(1)
 ```
 
-- Sample two classes of points: (a) 200 data points from a uniform distribution on [<img src="https://latex.codecogs.com/svg.latex?\Large&space;\gamma" title="D_w"/> /2, 1] x [-1/2, 1/2] and (b) another 200 data points from a uniform distribution on [-1, -<img src="https://latex.codecogs.com/svg.latex?\Large&space;\gamma" title="D_w"/>/2] x [-1/2, 1/2], where <img src="https://latex.codecogs.com/svg.latex?\Large&space;\gamma" title="D_w"/> is a margin parameter. The margin parameter is a lower bound on the distances betweeen any two points in different classes. See figure below for an illustration:
+- Sample two classes of points: (a) 200 data points from a uniform distribution on [<img src="https://latex.codecogs.com/svg.latex?\Large&space;\gamma" title="D_w"/> /2, 1] x [-1/2, 1/2] and (b) another 200 data points from a uniform distribution on [-1, -<img src="https://latex.codecogs.com/svg.latex?\Large&space;\gamma" title="D_w"/>/2] x [-1/2, 1/2], where <img src="https://latex.codecogs.com/svg.latex?\Large&space;\gamma" title="D_w"/> is a margin parameter. The margin parameter is a lower bound on the distances between any two points in different classes. See figure below for an illustration:
 
 ![](https://github.com/lse-st449/lectures/raw/master/Week02/Class/graphs/percep_data.png)
 
