@@ -1,9 +1,9 @@
 # Seminar 2: Feedforward Neural Networks
 
 Our goals in this seminar session are:
-* To implement, train, and evaluate a neural network that implements the XOR function
-* To implement and run the single-layer perceptron learning algorithm (homework)
 * To learn some new TensorFlow library concepts, such as variable scope
+* To implement, train, and evaluate a neural network that solves the XOR problem
+* To implement and run the single-layer perceptron learning algorithm (homework)
 
 ## XOR problem
 
