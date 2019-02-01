@@ -8,7 +8,7 @@ Our goals in this seminar session are:
 
 ### Get Gradients in TensorFlow
 ```
-tf.gradients(ys, xs, grad_ys=None, name='gradients', colocate_gradients_with_ops=False,gate_gradients=False, aggregation_method=None, stop_gradients=None)
+tf.gradients(ys, xs, grad_ys=None, name='gradients')
 ```
 This method constructs symbolic derivatives of sum of `ys` w.r.t. `x` in `xs`.
 For example:
@@ -16,6 +16,8 @@ For example:
 dw, db = tf.gradients(loss, [w, b])
 ```
 This returns the gradients of the loss function w.r.t parameter `w` and `b`. 
+
+grad_ys is a list of tensors of the same length as ys that holds the initial gradients for each y in ys. When grad_ys is None, we fill in a tensor of '1's of the shape of y for each y in ys. A user can provide their own initial grad_ys to compute the derivatives using a different initial gradient for each y (e.g., if one wanted to weight the gradient differently for each value in each y).
 
 ## Optimizers in TensorFlow
 
