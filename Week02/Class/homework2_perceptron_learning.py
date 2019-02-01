@@ -88,8 +88,10 @@ def main():
 
     y_times_y_hat = tf.multiply(y, y_hat)
     loss = tf.math.maximum(-y * output, 0)
+    assign_op = None
     # weights += lr * y * x
-    assign_op = tf.assign(weights, weights + lr * y * x)
+    if y != y_hat:
+        assign_op = tf.assign(weights, weights + lr * y * x)
     # optimiser = tf.train.GradientDescentOptimizer(learning_rate=lr).minimize(loss)
     loss_list = []
     count = 0
