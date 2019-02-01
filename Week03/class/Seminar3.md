@@ -167,7 +167,7 @@ After adjusting the learning rate to `1e-5`, we observe that both the loss and g
 
 ## Homework: Non-convex optimization
 
-Consider loss function <img src="https://latex.codecogs.com/svg.latex?\Large&space;f(x_1, x_2)=\frac{1}{2}x_1^2-\frac{1}{2}x^2_2(1-\frac{1}{2}x^2_2)" title="\Large GD" />, 
+Consider loss function <img src="https://latex.codecogs.com/svg.latex?\Large&space;f(x_1,x_2)=\frac{1}{2}x_1^2-\frac{1}{2}x^2_2(1-\frac{1}{2}x^2_2)" title="\Large GD"/>, 
 - Compute critical points
 - Qualify critical points as either local minima or saddle points, if there are any saddle points are they strict saddle points?
 - Implement GD algorithm to minimize the loss function in TensorFlow
@@ -180,7 +180,7 @@ Consider loss function <img src="https://latex.codecogs.com/svg.latex?\Large&spa
   - (0, 10)
 - Plot the parameter values versus the number of iterations. What do you observe? Comment.
 - Run the algorithm for 10 different initial values taken uniformly at random from [-10, 10] x [-10, 10]
-  -  Check the trajectories of parameter vector <img src="https://latex.codecogs.com/svg.latex?\Large&space;(x_1, x_2)" title="\Large GD" /> versus the number of iterations
+  -  Check the trajectories of parameter vector <img src="https://latex.codecogs.com/svg.latex?\Large&space;(x_1,x_2)" title="\Large GD" /> versus the number of iterations
   -   Comment what you observe
 
 **Hint**:
