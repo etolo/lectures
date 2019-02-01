@@ -23,8 +23,8 @@ This returns the gradients of the loss function w.r.t parameter `w` and `b`.
 
 GD update: 
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;w^{(t+1)}=w^{(t)}-\eta\bigtriangledown f(w^{(t)})" title="\Large GD" />, 
-where <img src="https://latex.codecogs.com/svg.latex?\Large&space;\eta" title="\Large GD" /> is the step size (learning rate) and <img src="https://latex.codecogs.com/svg.latex?\Large&space;\bigtriangledown f(w^{(t)})" title="\Large GD" /> is the gradient of function <img src="https://latex.codecogs.com/svg.latex?\Large&space;f" title="\Large GD" /> at point <img src="https://latex.codecogs.com/svg.latex?\Large&space;w^{(t)}" title="\Large GD" />. In TensorFlow, this algorithm is implemented in the `tf.train.GradientDescentOptimizer` class. The constructor of the class is
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;w^{(t+1)}=w^{(t)}-\eta\bigtriangledownf(w^{(t)})" title="\Large GD" />, 
+where <img src="https://latex.codecogs.com/svg.latex?\Large&space;\eta" title="\Large GD" /> is the step size (learning rate) and <img src="https://latex.codecogs.com/svg.latex?\Large&space;\bigtriangledownf(w^{(t)})" title="\Large GD" /> is the gradient of function <img src="https://latex.codecogs.com/svg.latex?\Large&space;f" title="\Large GD" /> at point <img src="https://latex.codecogs.com/svg.latex?\Large&space;w^{(t)}" title="\Large GD" />. In TensorFlow, this algorithm is implemented in the `tf.train.GradientDescentOptimizer` class. The constructor of the class is
 ```
 tf.train.GradientDescentOptimizer(learning_rate, use_locking=False, Name='GradientDescent')
 ```
@@ -64,13 +64,13 @@ tf.train.MomentumOptimizer(learning_rate, momentum, use_locking=False, name='Mom
 ```
 This function is an implementation of the momentum algorithm:
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;v^{(t+1)}=mv^{(t)}+\eta\bigtriangledown f(w^{(t)})" title="\Large GD"/>,  
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;v^{(t+1)}=mv^{(t)}+\eta\bigtriangledownf(w^{(t)})" title="\Large GD"/>,  
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;w^{(t+1)}=w^{(t)}+v^{(t+1)}" title="\Large GD" /> , 
 
 where `m` is momentum and `eta` is the learning rate parameter.  
 
 When the argument `use_nesterov` is set `True`,  the optimizer uses Sutskever's Nesterov momentum (2013), i.e., 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space; v^{(t+1)}=w^{(t)}-\eta\bigtriangledown f(w^{(t)})" title="\Large GD" />,  
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;v^{(t+1)}=w^{(t)}-\eta\bigtriangledownf(w^{(t)})" title="\Large GD" />,  
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;w^{(t+1)}=(1-m^{(t)})v^{(t+1)}+m^{(t)}v^{(t)}" title="\Large GD" /> 
 
 ### RMSProp 
@@ -116,10 +116,11 @@ for i in range(epoch):
 
 Loss function using Adam algorithm compared to the loss function using mini-batch Adam algorithm, 
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar3/graphs/loss_adam_wihtout_minibatch.png" width="550"/> <img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar3/graphs/loss_stochastic_adam.png" width="550"/> 
+<img src="https://github.com/lse-st449/lectures/raw/master/Week03/class/graphs/loss_adam_wihtout_minibatch.png" width="550"/> <img src="https://github.com/lse-st449/lectures/raw/master/Week03/class/graphs/loss_stochastic_adam.png" width="550"/> 
 
 Gradient trajectory using Adam algorithm compared with the gradient trajectory using mini-batch Adam algorithm with mini-batch size `15`, 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar3/graphs/grad_path_adam_wihtout_minibatch.png" width="550"/> <img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar3/graphs/grad_path_stochastic_adam.png" width="550"/> 
+
+<img src="https://github.com/lse-st449/lectures/raw/master/Week03/class/graphs/grad_path_adam_wihtout_minibatch.png" width="550"/> <img src="https://github.com/lse-st449/lectures/raw/master/Week03/class/graphs/grad_path_stochastic_adam.png" width="550"/> 
 
 ## Monitor the optimization process
 
@@ -127,7 +128,7 @@ When the number and dimensionality of the parameters are both small, one can vis
 
 The following plot compares the performances of different optimizers in solving the logistic regression problem in homework 1:
 
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar3/graphs/loss_curve_comparison.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week03/class/graphs/loss_curve_comparison.png)
 
 ### How learning may go wrong
 
@@ -138,19 +139,19 @@ The examples are generated using the linear regression exercise in Seminar 1.
 ### step size too small
 When the learning rate is set to be `1e-8`, we do not observe convergence in the loss or gradient plot even after 50,000 iterations.   
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar3/graphs/GD_lr-8.png" width="550"/> <img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar3/graphs/GD_lr-8_grad.png" width="550"/> 
+<img src="https://github.com/lse-st449/lectures/raw/master/Week03/class/graphs/GD_lr-8.png" width="550"/> <img src="https://github.com/lse-st449/lectures/raw/master/Week03/class/graphs/GD_lr-8_grad.png" width="550"/> 
 
 The gradient trajectory also shows slow movements towards the optimal point.  
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar3/graphs/GD_lr-8_path.png" width="550"/> 
+<img src="https://github.com/lse-st449/lectures/raw/master/Week03/class/graphs/GD_lr-8_path.png" width="550"/> 
 
 ### Step size too large
 
 When we increase the learning rate to `1e-2`, the gradients exploded and loss went to infinity. 
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar3/graphs/GD_lr-2.png" width="550"/> <img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar3/graphs/GD_lr-2_grad.png" width="550"/> 
+<img src="https://github.com/lse-st449/lectures/raw/master/Week03/class/graphs/GD_lr-2.png" width="550"/> <img src="https://github.com/lse-st449/lectures/raw/master/Week03/class/graphs/GD_lr-2_grad.png" width="550"/> 
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar3/graphs/GD_lr-2_path.png" width="550"/> 
+<img src="https://github.com/lse-st449/lectures/raw/master/Week03/class/graphs/GD_lr-2_path.png" width="550"/> 
 
 You may want to lower the learning rate or try a more robust optimizer.  
 
@@ -158,15 +159,15 @@ You may want to lower the learning rate or try a more robust optimizer.
 
 After adjusting the learning rate to `1e-5`, we observe that both the loss and gradients converged after less than 200 iterations.
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar3/graphs/GD_lr-5.png" width="550"/> <img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar3/graphs/GD_lr-5_grad.png" width="550"/> 
+<img src="https://github.com/lse-st449/lectures/raw/master/Week03/class/graphs/GD_lr-5.png" width="550"/> <img src="https://github.com/lse-st449/lectures/raw/master/Week03/class/graphs/GD_lr-5_grad.png" width="550"/> 
 
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar3/graphs/GD_lr-5_path.png" width="550"/> 
+<img src="https://github.com/lse-st449/lectures/raw/master/Week03/class/graphs/GD_lr-5_path.png" width="550"/> 
 
 
 ## Homework: Non-convex optimization
 
-Consider loss function <img src="https://latex.codecogs.com/svg.latex?\Large&space;f(x_1, x_2)=\frac{1}{2}x_1^2-\frac{1}{2}x^2_2(1-\frac{1}{2}x^2_2)" title="\Large GD" />, 
+Consider loss function <img src="https://latex.codecogs.com/svg.latex?\Large&space;f(x_1,x_2)=\frac{1}{2}x_1^2-\frac{1}{2}x^2_2(1-\frac{1}{2}x^2_2)" title="\Large GD"/>, 
 - Compute critical points
 - Qualify critical points as either local minima or saddle points, if there are any saddle points are they strict saddle points?
 - Implement GD algorithm to minimize the loss function in TensorFlow
@@ -179,7 +180,7 @@ Consider loss function <img src="https://latex.codecogs.com/svg.latex?\Large&spa
   - (0, 10)
 - Plot the parameter values versus the number of iterations. What do you observe? Comment.
 - Run the algorithm for 10 different initial values taken uniformly at random from [-10, 10] x [-10, 10]
-  -  Check the trajectories of parameter vector <img src="https://latex.codecogs.com/svg.latex?\Large&space;(x_1, x_2)" title="\Large GD" /> versus the number of iterations
+  -  Check the trajectories of parameter vector <img src="https://latex.codecogs.com/svg.latex?\Large&space;(x_1,x_2)" title="\Large GD" /> versus the number of iterations
   -   Comment what you observe
 
 **Hint**:
