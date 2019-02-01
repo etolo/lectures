@@ -88,6 +88,7 @@ def main():
 
     y_times_y_hat = tf.multiply(y, y_hat)
     loss = tf.math.maximum(-y * output, 0)
+
     assign_op = None
     # weights += lr * y * x
     if y != y_hat:
