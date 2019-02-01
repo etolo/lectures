@@ -93,7 +93,7 @@ def main():
     # weights += lr * y * x
     if y != y_hat:
         assign_op = tf.assign(weights, weights + lr * y * x)
-    # optimiser = tf.train.GradientDescentOptimizer(learning_rate=lr).minimize(loss)
+
     loss_list = []
     count = 0
 
