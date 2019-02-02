@@ -71,7 +71,8 @@ This function is an implementation of the momentum algorithm:
 
 where `m` is momentum and `eta` is the learning rate parameter.  
 
-When the argument `use_nesterov` is set `True`,  the optimizer uses Sutskever's momentum algorithm (2013) (derived from Nesterov's acceleration algorithm), i.e., 
+When the argument `use_nesterov` is set `True`,  the optimizer uses Sutskever's momentum algorithm (2013) (derived from Nesterov's acceleration algorithm), i.e.,
+
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;v^{(t+1)}=w^{(t)}-\eta\bigtriangledownf(w^{(t)})" title="\Large GD" />,  
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;w^{(t+1)}=(1-m^{(t)})v^{(t+1)}+m^{(t)}v^{(t)}" title="\Large GD" /> 
 
