@@ -1,7 +1,7 @@
 # Seminar 3: Optimization for training neural networks
 
 Our goals in this seminar session are:
-* Explain gradient computation in TensorFlow
+* Explain gradient computation in TensorFlow (backpropagation algorithm: see lecture slides)
 * Learn about how to use different optimizers in TensorFlow
 * Homework: evaluate gradient descent algorithm with random initalization for a non-convex optimization problem
 
