@@ -25,7 +25,7 @@ This returns the gradients of the loss function w.r.t parameters `w` and `b`.
 
 GD update: 
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;w^{(t+1)}=w^{(t)}-\eta\bigtriangledownf(w^{(t)})" title="\Large GD"/>, 
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;w^{(t+1)}=w^{(t)}-\eta\bigtriangledownf(w^{(t)})" title="\Large GD"/> 
 
 where <img src="https://latex.codecogs.com/svg.latex?\Large&space;\eta" title="\Large GD"/> is the step size (learning rate) and <img src="https://latex.codecogs.com/svg.latex?\Large&space;\nablaf(w^{(t)})" title="\Large GD" /> is the gradient of function <img src="https://latex.codecogs.com/svg.latex?\Large&space;f" title="\Large GD"/> at point <img src="https://latex.codecogs.com/svg.latex?\Large&space;w^{(t)}" title="\Large GD" />. In TensorFlow, this algorithm is implemented in the `tf.train.GradientDescentOptimizer` class. The constructor of the class is
 ```
