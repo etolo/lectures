@@ -67,7 +67,7 @@ tf.train.MomentumOptimizer(learning_rate, momentum, use_locking=False, name='Mom
 ```
 This function is an implementation of the momentum algorithm:
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;v^{(t+1)}=mv^{(t)}+\eta\nabla{f(w^{(t)})}" title="\Large GD"/>,  
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;v^{(t+1)}=mv^{(t)}-\eta\nabla{f(w^{(t)})}" title="\Large GD"/>,  
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;w^{(t+1)}=w^{(t)}+v^{(t+1)}" title="\Large GD" /> , 
 
 where `m` is momentum and `eta` is the learning rate parameter.  
