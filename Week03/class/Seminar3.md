@@ -3,19 +3,19 @@
 Our goals in this seminar session are:
 * Explain gradient computation in TensorFlow
 * Learn about how to use different optimizers in TensorFlow
-* Homework: evaluate gradient descent algorithm with random initalization for a non-convex optimisation problem
+* Homework: evaluate gradient descent algorithm with random initalization for a non-convex optimization problem
 
 
 ### Get Gradients in TensorFlow
 ```
 tf.gradients(ys, xs, grad_ys=None, name='gradients')
 ```
-This method constructs symbolic derivatives of sum of `ys` w.r.t. `x` in `xs`.
+This method computes symbolic derivatives of sum of `ys` w.r.t. `x` in `xs`.
 For example:
 ```
 dw, db = tf.gradients(loss, [w, b])
 ```
-This returns the gradients of the loss function w.r.t parameter `w` and `b`. 
+This returns the gradients of the loss function w.r.t parameters `w` and `b`. 
 
 `grad_ys` is a list of tensors of the same length as `ys` that holds the initial gradients for each `y` in `ys`. When `grad_ys` is None, we fill in a tensor of '1's of the shape of `y` for each `y` in `ys`. A user can provide their own initial `grad_ys` to compute the derivatives using a different initial gradient for each `y` (e.g., if one wanted to weight the gradient differently for each value in each `y`).
 
@@ -25,8 +25,8 @@ This returns the gradients of the loss function w.r.t parameter `w` and `b`.
 
 GD update: 
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;w^{(t+1)}=w^{(t)}-\eta\bigtriangledown(f(w^{(t)}))" title="\Large GD" />, 
-where <img src="https://latex.codecogs.com/svg.latex?\Large&space;\eta" title="\Large GD" /> is the step size (learning rate) and <img src="https://latex.codecogs.com/svg.latex?\Large&space;\bigtriangledown(f(w^{(t)}))" title="\Large GD" /> is the gradient of function <img src="https://latex.codecogs.com/svg.latex?\Large&space;f" title="\Large GD" /> at point <img src="https://latex.codecogs.com/svg.latex?\Large&space;w^{(t)}" title="\Large GD" />. In TensorFlow, this algorithm is implemented in the `tf.train.GradientDescentOptimizer` class. The constructor of the class is
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;w^{(t+1)}=w^{(t)}-\eta\bigtriangledown f(w^{(t)})" title="\Large GD" />, 
+where <img src="https://latex.codecogs.com/svg.latex?\Large&space;\eta" title="\Large GD" /> is the step size (learning rate) and <img src="https://latex.codecogs.com/svg.latex?\Large&space;\bigtriangledown f(w^{(t)})" title="\Large GD" /> is the gradient of function <img src="https://latex.codecogs.com/svg.latex?\Large&space;f" title="\Large GD" /> at point <img src="https://latex.codecogs.com/svg.latex?\Large&space;w^{(t)}" title="\Large GD" />. In TensorFlow, this algorithm is implemented in the `tf.train.GradientDescentOptimizer` class. The constructor of the class is
 ```
 tf.train.GradientDescentOptimizer(learning_rate, use_locking=False, Name='GradientDescent')
 ```
@@ -36,7 +36,7 @@ The commonly used methods of this class are: `.compute_gradients()`, `.apply_gra
 compute_gradients(loss, var_list=None, gate_gradients=GATE_OP, aggregation_method=None, colocate_gradients_with_ops=False, grad_loss=None)
 ```
 
-This method wraps the `tf.get_gradient()` function with additional settings. The `gate_gradients` argument is explained in [TensorFlow-optimizer.py implementation](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/python/training/optimizer.py#L281):
+This method wraps the `tf.gradients()` function with additional settings. The `gate_gradients` argument is explained in [TensorFlow-optimizer.py implementation](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/python/training/optimizer.py#L281):
 >`GATE_NONE`: Compute and apply gradients in parallel.  This provides the maximum parallelism in execution, at the cost of some non-reproducibility  in the results.  For example the two gradients of `matmul` depend on the input  values: With `GATE_NONE` one of the gradients could be applied to one of the  inputs _before_ the other gradient is computed resulting in non-reproducible  results.  
 
 >`GATE_OP`: For each Op, make sure all gradients are computed before they are used. This prevents race conditions for Ops that generate gradients for multiple inputs where the gradients depend on the inputs. 
@@ -71,7 +71,7 @@ This function is an implementation of the momentum algorithm:
 
 where `m` is momentum and `eta` is the learning rate parameter.  
 
-When the argument `use_nesterov` is set `True`,  the optimizer uses Sutskever's Nesterov momentum (2013), i.e., 
+When the argument `use_nesterov` is set `True`,  the optimizer uses Sutskever's momentum algorithm (2013) (derived from Nesterov's acceleration algorithm), i.e., 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;v^{(t+1)}=w^{(t)}-\eta\bigtriangledownf(w^{(t)})" title="\Large GD" />,  
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;w^{(t+1)}=(1-m^{(t)})v^{(t+1)}+m^{(t)}v^{(t)}" title="\Large GD" /> 
 
@@ -89,9 +89,9 @@ tf.train.AdagradOptimizer(learning_rate, initial_accumulator_value=0.1, use_lock
 tf.train.AdamOptimizer(learning_rate=0.001, beta1=0.9, beta2=0.999, epsilon=1e-08, use_locking=False, name='Adam')
 ```
 
-## Stochastic gradient descent algorithms
+## Mini-batch gradient descent algorithms
 
-Stochastic gradient descent algorithms use a stochastic gradient vector computed by evaluating the gradient of the loss function for a random sample of training examples. This sample is referred to as a **mini-batch**. Each time the algorithm makes a pass through the whole training dataset, an **epoch** is completed. 
+Mini-batch gradient descent algorithms use a stochastic gradient vector computed by evaluating the gradient of the loss function for a sample of training examples. This sample is referred to as a **mini-batch**. Each time the algorithm makes a pass through the whole training dataset, an **epoch** is completed. 
 
 Continuing with the linear regression exercise example, 
 ```
@@ -134,16 +134,16 @@ The following plot compares the performances of different optimizers in solving 
 
 ### How learning may go wrong
 
-The plots in this section show how learning can go wrong due to either the gradient step being too small or too large or your optimizer being stuck at a local minimum. You may want to adjust the learning rate, change the initialization or try another optimizer.  
+The plots in this section show how learning can go wrong due to either the learning rate being too small or too large. You may want to adjust the learning rate, change the initialization or try another optimizer.  
 
 The examples are generated using the linear regression exercise in Seminar 1. 
 
-### step size too small
+### Step size too small
 When the learning rate is set to be `1e-8`, we do not observe convergence in the loss or gradient plot even after 50,000 iterations.   
 
 <img src="https://github.com/lse-st449/lectures/raw/master/Week03/class/graphs/GD_lr-8.png" width="550"/> <img src="https://github.com/lse-st449/lectures/raw/master/Week03/class/graphs/GD_lr-8_grad.png" width="550"/> 
 
-The gradient trajectory also shows slow movements towards the optimal point.  
+The gradient trajectory also shows slow progress towards the optimal point.  
 
 <img src="https://github.com/lse-st449/lectures/raw/master/Week03/class/graphs/GD_lr-8_path.png" width="550"/> 
 
@@ -170,10 +170,10 @@ After adjusting the learning rate to `1e-5`, we observe that both the loss and g
 ## Homework: Non-convex optimization
 
 Consider loss function <img src="https://latex.codecogs.com/svg.latex?\Large&space;f(x_1,x_2)=\frac{1}{2}x_1^2-\frac{1}{2}x^2_2(1-\frac{1}{2}x^2_2)" title="\Large GD"/>, 
-- Compute critical points
+- Compute critical points (by hand using simple calculus)
 - Qualify critical points as either local minima or saddle points, if there are any saddle points are they strict saddle points?
 - Implement GD algorithm to minimize the loss function in TensorFlow
-- Run your GD algorithm with learning_rate =  0.01 for different initial values given as follows:
+- Run your GD algorithm with learning_rate = 0.01 for different initial values given as follows:
   - (a, 0), where a is an arbitrary real value
   - (0, 0.5)
   - (0, -0.5)
