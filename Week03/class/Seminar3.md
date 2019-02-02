@@ -27,7 +27,7 @@ GD update:
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;w^{(t+1)}=w^{(t)}-\eta\nabla{f(w^{(t)})}" title="\Large GD"/> 
 
-where <img src="https://latex.codecogs.com/svg.latex?\Large&space;\eta" title="\Large GD"/> is the step size (learning rate) and <img src="https://latex.codecogs.com/svg.latex?\Large&space;\nablaf(w^{(t)})" title="\Large GD" /> is the gradient of function <img src="https://latex.codecogs.com/svg.latex?\Large&space;f" title="\Large GD"/> at point <img src="https://latex.codecogs.com/svg.latex?\Large&space;w^{(t)}" title="\Large GD" />. In TensorFlow, this algorithm is implemented in the `tf.train.GradientDescentOptimizer` class. The constructor of the class is
+where <img src="https://latex.codecogs.com/svg.latex?\Large&space;\eta" title="\Large GD"/> is the step size (learning rate) and <img src="https://latex.codecogs.com/svg.latex?\Large&space;\nabla{f(w^{(t)})}" title="\Large GD" /> is the gradient of function <img src="https://latex.codecogs.com/svg.latex?\Large&space;f" title="\Large GD"/> at point <img src="https://latex.codecogs.com/svg.latex?\Large&space;w^{(t)}" title="\Large GD" />. In TensorFlow, this algorithm is implemented in the `tf.train.GradientDescentOptimizer` class. The constructor of the class is
 ```
 tf.train.GradientDescentOptimizer(learning_rate, use_locking=False, Name='GradientDescent')
 ```
@@ -67,14 +67,14 @@ tf.train.MomentumOptimizer(learning_rate, momentum, use_locking=False, name='Mom
 ```
 This function is an implementation of the momentum algorithm:
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;v^{(t+1)}=mv^{(t)}+\eta\bigtriangledownf(w^{(t)})" title="\Large GD"/>,  
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;v^{(t+1)}=mv^{(t)}+\eta\nabla{f(w^{(t)})}" title="\Large GD"/>,  
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;w^{(t+1)}=w^{(t)}+v^{(t+1)}" title="\Large GD" /> , 
 
 where `m` is momentum and `eta` is the learning rate parameter.  
 
 When the argument `use_nesterov` is set `True`,  the optimizer uses Sutskever's momentum algorithm (2013) (derived from Nesterov's acceleration algorithm), i.e.,
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;v^{(t+1)}=w^{(t)}-\eta\bigtriangledownf(w^{(t)})" title="\Large GD" />,  
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;v^{(t+1)}=w^{(t)}-\eta\nabla{f(w^{(t)})}" title="\Large GD" />,  
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;w^{(t+1)}=(1-m^{(t)})v^{(t+1)}+m^{(t)}v^{(t)}" title="\Large GD" /> 
 
 ### RMSProp 
