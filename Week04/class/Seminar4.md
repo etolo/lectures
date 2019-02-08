@@ -54,7 +54,7 @@ Output:
 
 ![alt text](https://github.com/lse-st449/lectures/raw/master/Week04/class/graphs/data_shape.png)
 
-What `one_hot=True` does is to represent the label "8" by using a vector of 10 elements, all equal to zero but the 8th element equal to 1. As shown in the outputs, the images are actually represented as a long vector with dimensionality of 784 (28x28).
+What `one_hot=True` does is to represent the label "8" by using a vector of 10 elements, all equal to zero but the 8th element equal to 1.
 
 **Tips**:  If you see warnings when importing MNIST, add `tf.logging.set_verbosity(tf.logging.INFO)` in the header. 
 
