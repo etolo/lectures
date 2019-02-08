@@ -130,7 +130,7 @@ The `training` argument takes a boolean. `training=True` will apply dropout whil
 
 #### Dense layer
 
-Our CNN returns an output tensor with a shape of `[batch_size, 7, 7, 64]`. We want to add a feedforward neural network to map the features extracted by CNN to the target classes.  To connect this dense layer, we need to flatten the feature map to an input tensor of shape `[batch_size, features]`.
+Assume we apply all the 3 layers above again, the output tensor has a shape of `[batch_size, 7, 7, 64]`. We want to add a feedforward neural network to map the features extracted by CNN to the target classes.  To connect this dense layer, we need to flatten the feature map to an input tensor of shape `[batch_size, features]`.
 
 ```
 p2_flat = tf.reshape(dropout2, [-1, 7 * 7 * 64])  # 3136 dims
