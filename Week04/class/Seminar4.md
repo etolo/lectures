@@ -368,3 +368,7 @@ Iteration: 10000, Loss: 0.0163, Accuracy: 0.9917
 
 <img src="https://github.com/lse-st449/lectures/raw/master/Week04/class/graphs/iter29550loss.png" width="550"/> <img src="https://github.com/lse-st449/lectures/raw/master/Week04/class/graphs/iter29550acc.png" width="550"/>   
 
+## Homework
+- Make the CNN work
+- Try different hyper-parameter settings 
+- Achieve 98% above accuracy
