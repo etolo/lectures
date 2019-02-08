@@ -15,7 +15,12 @@ Colour images often have higher resolutions. In this cat photo, one pixel has 3 
 Each element in one pixel is a number between 0 and 255.  
 
 How are colour images stored?  
-Use CIFAR-10 dataset as an example:  each image has a shape of 32x32x3. It is stored as a numpy array of uint8s with a length of 3072(32*32*3). The first 1024 entries contain the red channel values, the next 1024 the green, and the final 1024 the blue.
+**Different datasets store data in different shapes.**
+Use CIFAR-10 dataset as an example (each image has a shape of 32x32x3):
+
+If you download the data from some websites, it may stored as a numpy array of uint8s with a length of 3072(32*32*3). The first 1024 entries contain the red channel values, the next 1024 the green, and the final 1024 the blue.
+
+However, if you load the dataset from `tf.keras`, the data is stored of shape 32x32x3. For 10000 training images, the training set has a shape of 10000x32x32x3. 
 
 ## MNIST dataset
 
