@@ -6,11 +6,11 @@ The goal of this seminar is to learn how to create and train a convolutional neu
 
 ### B&W images
 As an example for B&W images (obtained from MNIST dataset):
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar4/graphs/mnist3.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week04/class/graphs/mnist3.png)
 This image has a resolution of 28x28 and 1 channel. Each pixel is between a number between 0 and 1, where 0 is shown as black, 1 is white and any number inbetween is gray.  The image data is presented as a flattened long vector with a length of 784(28*28).  
 
 ### Colour images
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar4/graphs/cat.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week04/class/graphs/cat.png)
 Colour images often have higher resolutions. In this cat photo, one pixel has 3 dimensions, i.e., the RGB channels.  The shape of this image is 178x218x3.  
 Each element in one pixel is a number between 0 and 255.  
 
@@ -47,7 +47,7 @@ print("Test set labels shape: {shape}".format(shape=mnist.test.labels.shape))
 ```
 Output:
 
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar4/graphs/data_shape.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week04/class/graphs/data_shape.png)
 
 What `one_hot=True` does is to represent the label "8" by using a vector of 10 elements, all equal to zero but the 8th element equal to 1. As shown in the outputs, the images are actually represented as a long vector with dimensionality of 784 (28x28).
 
@@ -70,12 +70,12 @@ def display(x, row, col):
             axe[i][j].set_yticks([])
     plt.show()
 ```
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar4/graphs/mnist_plot.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week04/class/graphs/mnist_plot.png)
 
 ## MNIST classification using CNN
 
 ###  Basic architechture
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar4/graphs/mnist_cnn.png" width="900" height="450">
+<img src="https://github.com/lse-st449/lectures/raw/master/Week04/class/graphs/mnist_cnn.png" width="900" height="450">
 
 ### Build the model
 #### Reshape the inputs
@@ -179,7 +179,7 @@ The reason why we didn't apply a softmax transformation is because the Tensorflo
 
 The softmax function is generalization of the logistic function, defined as
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space; \sigma(\mathbf{z})_j = \frac{e^{z_j} }{\sum_{k=1}^K e^{z_k}}" title="\Large cross-entropy" />  , for j = 1, ..., K. 
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;\sigma(\mathbf{z})_j=\frac{e^{z_j}}{\sum_{k=1}^Ke^{z_k}}" title="\Large cross-entropy" /> , for j = 1, ..., K. 
 
 The output of the softmax function can be seen as a probability distribution over K possible outcomes.  
 
@@ -224,11 +224,11 @@ def build_cnn_model():
 model = build_cnn_model()
 ann_viz(model, title="")
 ```
-With the above code, you should be able to produce a CNN graph like [this](https://gitlab.com/milanv/AI-and-Deep-Learning/blob/master/Seminars/Seminar4/cnn.pdf).
+With the above code, you should be able to produce a CNN graph like [this](https://github.com/lse-st449/lectures/raw/master/Week04/class/graphs/cnn.pdf).
 
 Use `model.summary()` to get a summary of the model,
 
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar4/graphs/model_summary.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week04/class/graphs/model_summary.png)
 
 ### Train the model
 
@@ -308,11 +308,11 @@ allows you to obtain mini-batches easily.
 ### Dropout
 It's very common for NNs to suffer from over-fitting.  We first run the algorithm without dropout layers.  After 200 iterations, we observe that the objective loss is 0.0003 and prediction accuracy is 92.06%. 
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar4/graphs/nodropout_loss.png" width="550"/> <img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar4/graphs/nodropout_acc.png" width="550"/>  
+<img src="https://github.com/lse-st449/lectures/raw/master/Week04/class/graphs/nodropout_loss.png" width="550"/> <img src="https://github.com/lse-st449/lectures/raw/master/Week04/class/graphs/nodropout_acc.png" width="550"/>  
 
 To improve the prediction accuracy, we add dropouts by setting `training=True` in the experiment. With `dropout rate = 0.2` in the CNN layers and dense layers, the accuracy is increased to 93.56% after 200 iterations.
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar4/graphs/dropout0.2loss.png" width="550"/> <img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar4/graphs/dropout0.2acc.png" width="550"/>   
+<img src="https://github.com/lse-st449/lectures/raw/master/Week04/class/graphs/dropout0.2loss.png" width="550"/> <img src="https://github.com/lse-st449/lectures/raw/master/Week04/class/graphs/dropout0.2acc.png" width="550"/>   
 
 ### Learning rate decay
 
@@ -362,9 +362,9 @@ Hyper-parameter setting:
 
 Iteration: 200, Loss: 15.1296, Accuracy: 0.9279
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar4/graphs/iter100loss.png" width="550"/> <img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar4/graphs/iter100acc.png" width="550"/>   
+<img src="https://github.com/lse-st449/lectures/raw/master/Week04/class/graphs/iter100loss.png" width="550"/> <img src="https://github.com/lse-st449/lectures/raw/master/Week04/class/graphs/iter100acc.png" width="550"/>   
 
 Iteration: 10000, Loss: 0.0163, Accuracy: 0.9917
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar4/graphs/iter29550loss.png" width="550"/> <img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar4/graphs/iter29550acc.png" width="550"/>   
+<img src="https://github.com/lse-st449/lectures/raw/master/Week04/class/graphs/iter29550loss.png" width="550"/> <img src="https://github.com/lse-st449/lectures/raw/master/Week04/class/graphs/iter29550acc.png" width="550"/>   
 
