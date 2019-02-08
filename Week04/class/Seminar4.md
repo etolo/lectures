@@ -7,7 +7,7 @@ The goal of this seminar is to learn how to create and train a convolutional neu
 ### B&W images
 As an example for B&W images (obtained from MNIST dataset):
 ![alt text](https://github.com/lse-st449/lectures/raw/master/Week04/class/graphs/mnist3.png)
-This image has a resolution of 28x28 and 1 channel. Each pixel is between a number between 0 and 1, where 0 is shown as black, 1 is white and any number inbetween is gray.  The image data is presented as a flattened long vector with a length of 784(28*28).  
+This image has a resolution of 28x28 and 1 channel. Each pixel is between a number between 0 and 1, where 0 is shown as black, 1 is white and any number inbetween is gray.  The image data is presented as a flattened long vector with a length of 784(28x28).  
 
 ### Colour images
 ![alt text](https://github.com/lse-st449/lectures/raw/master/Week04/class/graphs/cat.png)
@@ -18,7 +18,7 @@ How are colour images stored?
 **Different datasets store data in different shapes.**
 Use CIFAR-10 dataset as an example (each image has a shape of 32x32x3):
 
-If you download the data from some websites, it may stored as a numpy array of uint8s with a length of 3072(32*32*3). The first 1024 entries contain the red channel values, the next 1024 the green, and the final 1024 the blue.
+If you download the data from some websites, it may stored as a numpy array of uint8s with a length of 3072(32x32x3). The first 1024 entries contain the red channel values, the next 1024 the green, and the final 1024 the blue.
 
 However, if you load the dataset from `tf.keras`, the data is stored of shape 32x32x3. For 10000 training images, the training set has a shape of 10000x32x32x3. 
 
