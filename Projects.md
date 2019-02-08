@@ -26,6 +26,8 @@ You're welcome to propose a topic not included in the list below.
 ## Graph classification
 * Kipf and Welling, [Semi-supervised classification with graph convolutional networks](https://arxiv.org/pdf/1609.02907.pdf), ICLR 2017
 * Defferrard, Bresson, and Vandergheynst, [Convolutional neural networks on graphs with fast localized spectral filtering](https://papers.nips.cc/paper/6081-convolutional-neural-networks-on-graphs-with-fast-localized-spectral-filtering.pdf), NIPS 2016
+* Monti et al, [Geometric deep learning on graphs and manifolds using mixture model CNNs](http://openaccess.thecvf.com/content_cvpr_2017/papers/Monti_Geometric_Deep_Learning_CVPR_2017_paper.pdf), CVPR 2017
+* Hamilton, Ying and Leskovec, [Representation learning on graphs: methods and applications](https://www-cs.stanford.edu/people/jure/pubs/graphrepresentation-ieee17.pdf), Proc. of IEEE, 2017
 * Leskovec et al, [Tutorial: Deep learning for network biology](http://snap.stanford.edu/deepnetbio-ismb/) 
 
 ## Reinforcement learning
