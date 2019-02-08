@@ -11,7 +11,7 @@ This image has a resolution of 28x28 and 1 channel. Each pixel is between a numb
 
 ### Colour images
 ![alt text](https://github.com/lse-st449/lectures/raw/master/Week04/class/graphs/cat.png)
-Colour images often have higher resolutions. In this cat photo, one pixel has 3 dimensions, i.e., the RGB channels.  The shape of this image is 178x218x3.  
+In this beautiful cat photo, one pixel has 3 dimensions, i.e., the RGB channels.  The shape of this image is 178x218x3.  
 Each element in one pixel is a number between 0 and 255.  
 
 How are colour images stored?  
