@@ -362,7 +362,7 @@ Hyper-parameter setting:
 
 Iteration: 200, Loss: 15.1296, Accuracy: 0.9279
 
-<img src="https://github.com/lse-st449/lectures/raw/master/Week04/class/graphs/iter100loss.png" width="550"/> <img src="https://github.com/lse-st449/lectures/raw/master/Week04/class/graphs/iter100acc.png" width="550"/>   
+<img src="https://github.com/lse-st449/lectures/raw/master/Week04/class/graphs/iter200loss.png" width="550"/> <img src="https://github.com/lse-st449/lectures/raw/master/Week04/class/graphs/iter200acc.png" width="550"/>   
 
 Iteration: 10000, Loss: 0.0163, Accuracy: 0.9917
 
