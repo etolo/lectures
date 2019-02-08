@@ -18,9 +18,9 @@ How are colour images stored?
 **Different datasets store data in different shapes.**
 Use CIFAR-10 dataset as an example (each image has a shape of 32x32x3):
 
-If you download the data from some websites, it may stored as a numpy array of uint8s with a length of 3072(32x32x3). The first 1024 entries contain the red channel values, the next 1024 the green, and the final 1024 the blue.
+If you download the data from some websites, it may stored as a numpy array of uint8s with a length of 3,072(32x32x3). The first 1,024 entries contain the red channel values, the next 1,024 the green, and the final 1,024 the blue.
 
-However, if you load the CIFAR-10 dataset from `tf.keras`, the data is stored of shape 32x32x3. For 10000 training images, the training set has a shape of 10000x32x32x3. 
+However, if you load the CIFAR-10 dataset from `tf.keras`, the data is stored of shape 32x32x3. For 10,000 training images, the training set has a shape of 10,000x32x32x3. 
 
 ## MNIST dataset
 
