@@ -87,7 +87,7 @@ def main():
     y_hat = threshold_function(output)
 
     y_times_y_hat = tf.multiply(y, y_hat)
-    loss = tf.math.maximum(-y * output, 0)
+    loss = tf.math.maximum(-y * y_hat, 0)
 
     assign_op = None
     # weights += lr * y * x
