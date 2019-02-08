@@ -1,6 +1,7 @@
 # Seminar 4: Convolutional Neural Networks (CNN)
 
-The goal of this seminar is to learn how to create and train a convolutional neural network. We consider the task of handwritten digit recognition.
+The goal of this seminar excercise is to learn how to create and train a convolutional neural network in TensorFlow. We consider the task of image classification for handwritten digit recognition.
+We will demonstrate how the classification accuracy can be improved by using methods such as dropout.
 
 ## Image data
 
@@ -176,7 +177,7 @@ def classification_cnn(data, training=False):
     return outputs
 ```
 
-The reason why we didn't apply a softmax transformation is because the Tensorflow built-in cross-entropy loss function applies the softmax function internally. 
+The reason why we didn't apply a softmax transformation is because the TensorFlow built-in cross-entropy loss function applies the softmax function internally. 
 
 ### Loss function 
 
@@ -326,7 +327,7 @@ The decayed learning rate is computed by
 ```
 decayed_learning_rate = learning_rate * decay_rate^(global_step / decay_steps)
 ```
-Tensorflow has built such a function for users:
+TensorFlow has built such a function for users:
 ```
 tf.train.exponential_decay(learning_rate, global_step, decay_steps, decay_rate, staircase=False, name=None)
 ```
@@ -374,6 +375,5 @@ Iteration: 10000, Loss: 0.0163, Accuracy: 0.9917
 <img src="https://github.com/lse-st449/lectures/raw/master/Week04/class/graphs/iter29550loss.png" width="550"/> <img src="https://github.com/lse-st449/lectures/raw/master/Week04/class/graphs/iter29550acc.png" width="550"/>   
 
 ## Homework
-- Make the CNN work
-- Try different hyper-parameter settings 
-- Achieve 98% above accuracy
+Implement and run the code for this seminar exercise (following the instructions given above). You may also play with the setting of various hyper-parameters to observe the effect on the classification accuracy.
+This will be a good practice in general, but also useful for Assignment 1 of the continuous assesment part of the module.
