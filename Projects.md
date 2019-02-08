@@ -11,7 +11,7 @@ You're welcome to propose a topic not included in the list below.
 
 * Gurovich et al [Identifying facial phenotypes of genetic disorders using deep learning](https://www.nature.com/articles/s41591-018-0279-0?error=cookies_not_supported&code=810c6851-7b27-4402-b84d-a8fbe2a7819c), Nature Medicine, 2018
 * Bien et al, [MRNet: Deep-learning-assisted diagnosis for knee magnetic resonance imaging](https://stanfordmlgroup.github.io/projects/mrnet/), PLOS Medicine, 2018
-
+* ResNet in TensorFlow https://github.com/tensorflow/models/tree/master/official/resnet
 
 ## Sequence models
 
