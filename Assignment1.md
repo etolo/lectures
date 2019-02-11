@@ -59,6 +59,7 @@ The hyper-parameter settings:
 ## P3. CIFAR10 image classification
 
 Design and implement a convolutional neural network for the CIFAR10 image classification task aiming to achieve a high test accuracy. Evaluate the classification accuracy by reporting top-1 and top-5 test error rates. 
+
 **Task:** plot the average loss, top-1 error rate and top-5 error rate per epoch versus the number of epochs for the training and the test dataset. 
 Make sure to well describe and justify your network architecture design choices. 
 
