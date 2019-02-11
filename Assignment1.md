@@ -29,7 +29,6 @@ The hyper-parameter settings are given as below:
 - Mini-batch gradient descent with Nesterov’s momentum
 - Mini-batch Adam 
 
-
 Discuss how the performances of different optimization algorithms compare to each other.
 
 ## P2. CIFAR10 CNN: convergence of minibatch gradient descent
@@ -38,7 +37,7 @@ Implement a CNN architecture that consists of 3 convolutional layers followed by
 
 Each convolutional layer consists of a sublayer of 5x5 convolutional filters with stride 1 followed by a sublayer of 2x2 max-pool units with stride 2. Each neuron applies ReLU activation function.
 
-**Task:**: answer the same questions as in Problem P1. In addition, show the results by adding dropout. Comment the results. 
+**Task:** answer the same questions as in Problem P1. In addition, show the results by adding dropout. Comment the results. 
 
 **Hints:**
 
