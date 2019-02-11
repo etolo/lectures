@@ -1,6 +1,6 @@
 # Assignment 1
 
-## P1: MNIST classification using multi-class logistic regression 
+## P1. MNIST classification using multi-class logistic regression 
 
 Consider a L2-regularized multi-class logistic regression model using the MNIST dataset. 
 
