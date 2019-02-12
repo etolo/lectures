@@ -18,7 +18,7 @@ with a L2 regularizer on the weight parameters <img src="https://latex.codecogs.
 
 The hyper-parameter settings are given as below:
 - minibatch size = 128 
-- starting learning rate <img src="https://latex.codecogs.com/svg.latex?\Large&space;\eta^{(0)}=\eta=0.001" title="\Large cross-entropy"/>
+- starting learning rate <img src="https://latex.codecogs.com/svg.latex?\Large&space;\eta^{(0)}=0.001" title="\Large cross-entropy"/>
 - decaying learning rate <img src="https://latex.codecogs.com/svg.latex?\Large&space;\eta^{(t)}=\eta/\sqrt{t}" title="\Large cross-entropy"/> during training where <img src="https://latex.codecogs.com/svg.latex?\Large&space;t" title="t"/> is the number of epochs 
 - Momentum = 0.7
 - <img src="https://latex.codecogs.com/svg.latex?\Large&space;\lambda=0.01" title="\Large cross-entropy"/>
