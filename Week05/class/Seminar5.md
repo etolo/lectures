@@ -151,10 +151,7 @@ After defining the computation within a cell,
 We will train a RNN using transcripts of Donald Trump's speeches in 2016 using a character-level LSTM model. Ideally, our model will be able to learn the structure and grammar from the transcripts and generate something similar. 
 
 ### General idea
-For a character-level RNN model,  the training set and corresponding targets are demonstrated as below:
-![alt text](https://github.com/lse-st449/lectures/raw/master/Week05/class/graphs/text.png)
-
-The RNN is therefore designed to predict the sequence:
+For a character-level RNN model, the RNN is designed to predict the sequence:
 ![alt text](https://github.com/lse-st449/lectures/raw/master/Week05/class/graphs/rnnblock.png)
 
 ### Pre-process text data
