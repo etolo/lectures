@@ -169,7 +169,6 @@ If successful, you will see
 #### Read from the file and count unique characters
 ```
 text = open('trump_speeches.txt').read()
-#text = open(path_to_file).read()
 vocab = sorted(set(text))
 vocab_size = len(vocab)
 print('Data has {} characters, {} unique characters'.format(len(text), len(vocab)))
