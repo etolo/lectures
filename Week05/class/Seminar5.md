@@ -217,6 +217,7 @@ dataset = sections.map(split_input_target)
 
 ### Build the model
 ![alt text](https://github.com/lse-st449/lectures/raw/master/Week05/class/graphs/rnnfortext.png)
+
 Typically, we call the constructor of a class by
 ```
 tf.keras.layers.Embedding(input_dim, output_dim,...)
