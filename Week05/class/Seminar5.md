@@ -90,7 +90,7 @@ The output `words_representations` of this layer is a 30x20 matrix.
 
 2. `tf.keras.layers.GRU`
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar5/graphs/gru_cell.png"  width="750" height="450">
+<img src="https://github.com/lse-st449/lectures/raw/master/Week05/class/graphs/gru_cell.png"  width="750" height="450">
 
 An implementation of Gated Recurrent Unit (GRU) - Cho et al 2014.
 ```
@@ -98,7 +98,7 @@ __init__(units, activation='tanh', recurrent_activation='hard_sigmoid', use_bias
 ```
 3. `tf.keras.layers.LSTM`
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar5/graphs/LSTM_cell.png"  width="750" height="450">
+<img src="https://github.com/lse-st449/lectures/raw/master/Week05/class/graphs/LSTM_cell.png"  width="750" height="450">
 
 An implementation of `Long Short-Term Memory (LSTM) unit - Hochreiter and Schmidhuber 1997`.  The constructor of the class is, 
 ```
@@ -115,7 +115,7 @@ This class allows you to define the computation in a cell in the RNN.  As explai
 **Example:**
 In the lecture, we saw a common RNN architecture
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar5/graphs/rnn_a.png"  width="650" height="450">
+<img src="https://github.com/lse-st449/lectures/raw/master/Week05/class/graphs/rnn_a.png"  width="650" height="350">
 
 ```
 class RNNCell(keras.layers.Layer):        
@@ -152,10 +152,10 @@ We will train a RNN using transcripts of Donald Trump's speeches in 2016 using a
 
 ### General idea
 For a character-level RNN model,  the training set and corresponding targets are demonstrated as below:
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar5/graphs/text.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week05/class/graphs/text.png)
 
 The RNN is therefore designed to predict the sequence:
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar5/graphs/rnnblock.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week05/class/graphs/rnnblock.png)
 
 ### Pre-process text data
 #### Upload file to Google Colab 
@@ -167,7 +167,7 @@ from google.colab import files
 files.upload()
 ```
 If successful, you will see
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar5/graphs/upload_file.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week05/class/graphs/upload_file.png)
 
 #### Read from the file and count unique characters
 ```
@@ -178,7 +178,7 @@ vocab_size = len(vocab)
 print('Data has {} characters, {} unique characters'.format(len(text), len(vocab)))
 print(text[:100])
 ```
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar5/graphs//len_text_unique.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week05/class/graphs/len_text_unique.png)
 
 #### Map unique characters to indices
 ```
@@ -186,7 +186,7 @@ char_to_idx = {u: i for i, u in enumerate(vocab)}
 print(char_to_idx)
 print('The index for lowercase letter Q is:', char_to_idx['Q'])
 ```
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar5/graphs/char_to_idx.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week05/class/graphs/char_to_idx.png)
 
 #### Convert the full text into integer representations
 ```
@@ -196,7 +196,7 @@ Show the first 17 mapping from text to integers,
 ```
 print ('{} --- are mapped to --- > {}'.format(text[:17], int_text[:17]))
 ```
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar5/graphs/char_mapped_to_int.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week05/class/graphs/char_mapped_to_int.png)
 
 To decode the output of the model, we also need 
 ```
@@ -220,7 +220,7 @@ dataset = sections.map(split_input_target)
 ```
 
 ### Build the model
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar5/graphs/rnnfortext.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week05/class/graphs/rnnfortext.png)
 Typically, we call the constructor of a class by
 ```
 tf.keras.layers.Embedding(input_dim, output_dim,...)
@@ -262,7 +262,7 @@ rnn_lstm.build(tf.TensorShape([batch_size, seq_len]))
 ```
 We can print out the summary of the model using `rnn_lstm.summary()`, 
 
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar5/graphs/Param_count.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week05/class/graphs/Param_count.png)
 
 Then, we use `tf.train.Checkpoint` to save the parameters of the model after training,
 ```
@@ -296,7 +296,7 @@ for epoch in range(epochs):
       checkpoint.save(file_prefix = checkpoint_prefix)
 ```
 ### Generate new text
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar5/graphs/rnnprediction.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week05/class/graphs/rnnprediction.png)
 Create a new instance, restore the parameter values saved at the latest checkpoint, and build a model with sequence length 1, 
 ```
 model = Model(vocab_size, embedding_dim, hidden_size)
