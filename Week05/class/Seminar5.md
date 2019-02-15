@@ -352,5 +352,5 @@ Now how to know I live to be our so the repabling it. Whis is amazing troes that
 And to years are wering proteclus. It’s here bord, that’s what I don’t have 10. Belicars, the people ching is he gons. It was also. They don’t want to tell you about this? But they were grauthing you bad 9D and we sent – I got it amazing – good speaking as an enample, and you look at this business assend how was tremendous campaign.". "I said, "Is if I said, "Look, "The and they don’t take a couple. Think they’re believe me and I mean, take a friend of the Srade Poter drove and I siement and what bring he stople and they are money to me termight, he said, "Dona
 ```
 #### Loss plot
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar5/graphs/loss.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week05/class/graphs/loss.png)
 
