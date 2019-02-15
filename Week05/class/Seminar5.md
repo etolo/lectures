@@ -294,6 +294,7 @@ for epoch in range(epochs):
 ```
 ### Generate new text
 ![alt text](https://github.com/lse-st449/lectures/raw/master/Week05/class/graphs/rnnprediction.png)
+
 Create a new instance, restore the parameter values saved at the latest checkpoint, and build a model with sequence length 1, 
 ```
 model = Model(vocab_size, embedding_dim, hidden_size)
