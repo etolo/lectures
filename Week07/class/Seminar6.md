@@ -341,6 +341,8 @@ As discussed in Lecture 6, the k-armed bandit problem is a classic learning prob
 
 In this exercise, our goal is to implement and evaluate the performance of the <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon" title="a"/>-greedy algorithm for the four Bernoulli arms example covered in the lecture.
 
+**Additional background on multi-arm bandits and regret**
+
 Recall that the <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon" title="a"/>-greedy algorithm at each decision time, makes a greedy choice with probability <img src="https://latex.codecogs.com/svg.latex?\Large&space;1-\epsilon" title="a"/>, and, otherwise, makes an explorative step by selecting an arm uniformly at random from the set of all arms. We have discussed in the lecture how adding such an explorative step can outperform a greedy algorithm (that always makes greedy choices) with respect to different performance metrics. In particular, we considered the regret defined as follows  
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathrm{Regret}(T)=Q^*(a^*)T-\sum_{t=1}^TQ^*(a_t)" title="a"/>
@@ -377,15 +379,17 @@ For any <img src="https://latex.codecogs.com/svg.latex?\Large&space;k" title="a"
 
 This result follows from Theorem 3 in the paper [Auer, Cesa-Bianchi and Fischer (2002)](https://homes.di.unimi.it/~cesabian/Pubblicazioni/ml-02.pdf). 
 
-The goal of this exercise is to empirically validate this theoretical result. 
+**Tasks for this exercise**
+
+The goal of this exercise is to empirically evaluate the regret of <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon" title="a"/>-greedy and <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon_t" title="a"/>-greedy algorithms and compare with above theoretical considerations. 
 
 - Environment setup 
   - Assume k = 4
-  -  the reward of each arm follows a Bernoulli distribution
-  - the Bernoulli parameters <img src="https://latex.codecogs.com/svg.latex?\Large&space;p=[0.1,0.4,0.1,0.1]" title="a" />  for all 4 arms
-  - fix seed `np.random.seed(3)`
+  - The reward of each arm follows a Bernoulli distribution
+  - The Bernoulli parameters <img src="https://latex.codecogs.com/svg.latex?\Large&space;p=[0.1,0.4,0.1,0.1]" title="a" />  for the arm rewards
+  - Fix seed `np.random.seed(3)`
 
-In order to keep consistency throughout the rest of the seminars, we will code the environment in the same manner as OpenAI gym, in which the step function take action as its only argument:
+In order to keep consistency with the rest of the seminar, we will code the environment in the same manner as OpenAI gym, in which the step function take action as its only argument:
 ```
 # environment
 bandit_probs = [0.10, 0.40, 0.10, 0.10]
@@ -396,12 +400,13 @@ def step(action):
     return reward
 ```
 
-**Tasks**: 
-- implement the <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon" title="a"/>-greedy algorithm explained in the lecture
-- compare the results for various <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon" title="a" /> values
-  - <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon=[0.05, 0.1, 0.2]" title="a" /> 
-- implement the <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon_t" title="a" />-greedy algorithm with <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon_t" title="a"/> as defined above 
-  - set <img src="https://latex.codecogs.com/svg.latex?\Large&space;c=0.1" title="a" /> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;d=0.3" title="a" />
-- run a total number of 50 runs with each run consisting of 1000 time steps
-- compute the average rewards and regrets at each time step for 50 trials
-- plot the cumulative average rewards and regrets vs total number of time steps
+**List of tasks**: 
+- Implement the <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon" title="a"/>-greedy algorithm defined in Lecture 6
+- Compare the regret for different <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon" title="a" /> values
+  - Take <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon=0.05,0.1,0.2" title="a" /> 
+- Implement the <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon_t" title="a" />-greedy algorithm with <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon_t" title="a"/> as defined above 
+  - Set <img src="https://latex.codecogs.com/svg.latex?\Large&space;c=0.1" title="a" /> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;d=0.3" title="a" /> (note this is the gap between the expected of the best arm and the second best (non-best) arm
+- In each case, run a total number of 50 runs with each run consisting of 1000 time steps
+- Compute the average regret at each time step for 50 trials
+- Plot the cumulative regrets vs the number of time steps
+- You may also evaluate and plot the average reward for each algorithm considered
