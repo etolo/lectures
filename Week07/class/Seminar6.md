@@ -367,7 +367,7 @@ It is well known that for stochastic multi-armed bandit problems the optimal gro
 
 This optimal regret growth can be achieved by an <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon_t" title="a"/>-greedy algorithm for which the probability of making an explorative step <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon_t" title="a"/> eventually decreases with time <img src="https://latex.codecogs.com/svg.latex?\Large&space;t" title="a"/> in a specific way. Concretely, this holds by defining 
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon_t = \min\left\{\frac{ck}{d^2 t},1\right\}" title="a"/>
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon_t = \min\left\{\frac{ck}{d^2t},1\right\}" title="a"/>
 
 where <img src="https://latex.codecogs.com/svg.latex?\Large&space;c>0" title="a"/> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;0<d<1" title="a"/> are parameters.
 
