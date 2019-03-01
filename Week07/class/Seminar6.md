@@ -351,7 +351,7 @@ Recall that the <img src="https://latex.codecogs.com/svg.latex?\Large&space;\eps
 
 where <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q^*(a)" title="a"/> is the expected reward of arm <img src="https://latex.codecogs.com/svg.latex?\Large&space;a" title="a"/>, <img src="https://latex.codecogs.com/svg.latex?\Large&space;a^*" title="a"/> is a best arm, and <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_t" title="a"/> is the arm selected by the algorithm at time step <img src="https://latex.codecogs.com/svg.latex?\Large&space;t" title="a"/>.
 
-The <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon" title="a"/>-greedy algorithm has a regret that linearly increases with time <img src="https://latex.codecogs.com/svg.latex?\Large&space;T" title="a"/>. This is easy to observe as follows. Let <img src="https://latex.codecogs.com/svg.latex?\Large&space;d" title="a"/> be a positive parameter such that <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q^*(a^*)-Q^*(a)\geqd" title="a"/> for all <img src="https://latex.codecogs.com/svg.latex?\Large&space;a" title="a"/> such that <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q^*(a)<Q^*(a^*)" title="a"/>. We call any arm <img src="https://latex.codecogs.com/svg.latex?\Large&space;a" title="a"/> such that <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q^*(a)<Q^*(a^*)" title="a"/> a non-best arm. Then, we can readily observe that the following relation holds
+The <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon" title="a"/>-greedy algorithm has a regret that linearly increases with time <img src="https://latex.codecogs.com/svg.latex?\Large&space;T" title="a"/>. This is easy to observe as follows. Let <img src="https://latex.codecogs.com/svg.latex?\Large&space;d" title="a"/> be a positive parameter such that <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q^*(a^*)-Q^*(a)\geq{d}" title="a"/> for all <img src="https://latex.codecogs.com/svg.latex?\Large&space;a" title="a"/> such that <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q^*(a)<Q^*(a^*)" title="a"/>. We call any arm <img src="https://latex.codecogs.com/svg.latex?\Large&space;a" title="a"/> such that <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q^*(a)<Q^*(a^*)" title="a"/> a non-best arm. Then, we can readily observe that the following relation holds
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathrm{Regret}(T)\geq{d{M_T}}" title="a"/>
 
@@ -375,7 +375,7 @@ This optimal regret growth can be achieved by an <img src="https://latex.codecog
 
 where <img src="https://latex.codecogs.com/svg.latex?\Large&space;c>0" title="a"/> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;0<d<1" title="a"/> are parameters.
 
-For any <img src="https://latex.codecogs.com/svg.latex?\Large&space;k" title="a"/>-armed bandit problem such that <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q^*(a)\in[0,1]" title="a"/> for each arm <img src="https://latex.codecogs.com/svg.latex?\Large&space;a" title="a"/> and such that <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q^*(a^*)-Q^*(a)\geqd" title="a"/> for each non-best arm <img src="https://latex.codecogs.com/svg.latex?\Large&space;a" title="a"/>, the <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon_t" title="a"/>-greedy algorithm with <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon_t" title="a"/> defined as above, has the regret bound:
+For any <img src="https://latex.codecogs.com/svg.latex?\Large&space;k" title="a"/>-armed bandit problem such that all arm reward distributions have supports contained in <img src="https://latex.codecogs.com/svg.latex?\Large&space;[0,1]" title="a"/> and such that <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q^*(a^*)-Q^*(a)\geq{d}" title="a"/> for each non-best arm <img src="https://latex.codecogs.com/svg.latex?\Large&space;a" title="a"/>, the <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon_t" title="a"/>-greedy algorithm with <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon_t" title="a"/> defined as above, has the regret bound:
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathrm{Regret}(T)=O((k/d^2)\log(T))" title="a"/>.
 
@@ -385,7 +385,7 @@ This result follows from Theorem 3 in the paper [Auer, Cesa-Bianchi and Fischer 
 
 The goal of this exercise is to empirically evaluate the regret of <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon" title="a"/>-greedy and <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon_t" title="a"/>-greedy algorithms and compare with above theoretical considerations. 
 
-- Environment setup 
+- Environment setup: 
   - Assume k = 4
   - The reward of each arm follows a Bernoulli distribution
   - The Bernoulli parameters <img src="https://latex.codecogs.com/svg.latex?\Large&space;p=[0.1,0.4,0.1,0.1]" title="a" />  for the arm rewards
