@@ -210,8 +210,6 @@ env.close()
 ```
 You should see a window pop up rendering the Cart-pole problem. 
 
-![Cart-pole problem](https://github.com/lse-st449/lectures/raw/master/Week07/class/graphs/Cart-Pole.mp4)
-
 It's a little bit more complicated in Google Colab as you will have to record the frames of the games and render the display through HTML.
 
 Firstly, import the dependencies, 
