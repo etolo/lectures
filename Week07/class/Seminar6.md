@@ -1,11 +1,13 @@
-# Seminar 6: Getting Started with OpenAI Gym
+# Seminar 6: Getting started with OpenAI Gym
 
 ## Introduction to OpenAI Gym
 The gym library developed by OpenAI is a collection of test problems — **environments** — that you can use to test your reinforcement learning algorithms.
 
 ## Available environments 
 Environments available in the gym include classic control, algorithmic, Atari and 2D and 3D robots tasks, from easy to difficult level.  
+
 ### Classic control 
+
 Classic control problems from RL literature.  
 ![Cartpole](https://github.com/lse-st449/lectures/raw/master/Week07/class/graphs/Cart-Pole.mp4)
 A pole is attached by an un-actuated joint to a cart, which moves along a frictionless track. The actions one could take are pushing the cart to the left or right. The goal is to prevent the pendulum from falling over.  A reward of +1 is given for every step that the pendulum remains upright. 
@@ -333,17 +335,17 @@ Observations: [ 0.16447311 0.71950543 -0.22039137 -0.86368136]
 Observations: [-0.21866421 -0.91799244 0.23148745 1.17893848]
 ```
 
-## Homework: multi-armed bandits problem
+## Homework: multi-armed bandits
 
-As explained in the lecture, the k-armed bandit problem is a classic learning problem that well demonstrates the dilemma between exploration and exploitation.
+As discussed in Lecture 6, the k-armed bandit problem is a classic learning problem that well demonstrates the dilemma between exploration and exploitation when making decisions.
 
-In this exercise, our goal is to implement and evaluae performance of the <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon" title="a"/>-greedy algorithm for the four Bernoulli arms example covered in the lecture.
+In this exercise, our goal is to implement and evaluate the performance of the <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon" title="a"/>-greedy algorithm for the four Bernoulli arms example covered in the lecture.
 
-Recall that the <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon" title="a"/>-greedy algorithm amounts to at each decision time, making a greedy choice with probability <img src="https://latex.codecogs.com/svg.latex?\Large&space;1-\epsilon" title="a"/>, and otherwise making an explorative step by selecting an arm uniformly at random from the set of all arms. We have discussed in the lecture how adding such an explorative step can outperform a greedy algorithm that always makes greedy choices with respect to different performance metrics. In particular, we considered the regret defined as follows  
+Recall that the <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon" title="a"/>-greedy algorithm at each decision time, makes a greedy choice with probability <img src="https://latex.codecogs.com/svg.latex?\Large&space;1-\epsilon" title="a"/>, and, otherwise, makes an explorative step by selecting an arm uniformly at random from the set of all arms. We have discussed in the lecture how adding such an explorative step can outperform a greedy algorithm (that always makes greedy choices) with respect to different performance metrics. In particular, we considered the regret defined as follows  
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathrm{Regret}(T)=Q^*(a^*)T - \sum_{t=1}^T Q^*(a_t)" title="a"/>
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathrm{Regret}(T)=Q^*(a^*)T-\sum_{t=1}^TQ^*(a_t)" title="a"/>
 
-where <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q^*(a)" title="a"/> is the expected reward of arm <img src="https://latex.codecogs.com/svg.latex?\Large&space;a" title="a"/>, <img src="https://latex.codecogs.com/svg.latex?\Large&space;a^*" title="a"/> is an optimal arm, and <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_t" title="a"/> is the arm selected by the algorithm at time step <img src="https://latex.codecogs.com/svg.latex?\Large&space;t" title="a"/>.
+where <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q^*(a)" title="a"/> is the expected reward of arm <img src="https://latex.codecogs.com/svg.latex?\Large&space;a" title="a"/>, <img src="https://latex.codecogs.com/svg.latex?\Large&space;a^*" title="a"/> is a best arm, and <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_t" title="a"/> is the arm selected by the algorithm at time step <img src="https://latex.codecogs.com/svg.latex?\Large&space;t" title="a"/>.
 
 The <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon" title="a"/>-greedy algorithm amouts to a regret that increases linearly with <img src="https://latex.codecogs.com/svg.latex?\Large&space;T" title="a"/>. This is easy to observe as follows. Let <img src="https://latex.codecogs.com/svg.latex?\Large&space;d" title="a"/> be a positive parameter such that <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q^*(a^*)-Q^*(a) \geq d" title="a"/> for all <img src="https://latex.codecogs.com/svg.latex?\Large&space;a" title="a"/> such that <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q^*(a)<Q^*(a^*)" title="a"/>. We can any arm <img src="https://latex.codecogs.com/svg.latex?\Large&space;a" title="a"/> such that <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q^*(a) < Q^*(a^*)" title="a"/> a non-best arm. Then, we can write
 
