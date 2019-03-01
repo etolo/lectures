@@ -6,9 +6,9 @@ The gym library developed by OpenAI is a collection of test problems — **envir
 ## Available environments 
 Environments available in the gym include classic control, algorithmic, Atari and 2D and 3D robots tasks, from easy to difficult level.  
 ### Classic control 
-Classic control problems from RL literature.   
+Classic control problems from RL literature.  
 ![Cartpole](https://github.com/lse-st449/lectures/raw/master/Week07/class/graphs/Cart-Pole.mp4)
-A pole is attached by an un-actuated joint to a cart, which moves along a frictionless track. The actions one could take are pushing the cart to the left or right.   The goal is to prevent the pendulum from falling over.  A reward of +1 is given for every step that the pendulum remains upright. 
+A pole is attached by an un-actuated joint to a cart, which moves along a frictionless track. The actions one could take are pushing the cart to the left or right. The goal is to prevent the pendulum from falling over.  A reward of +1 is given for every step that the pendulum remains upright. 
 
 ![Mountain Car](https://github.com/lse-st449/lectures/raw/master/Week07/class/graphs/mountain_car.mp4)
 A car is stuck in a valley. The goal is to drive up the mountain and reach where the flat is.  However, the car's engine is not strong enough climb to the top in a single run. The way to succeed is to drive back and forth to build up momentum.  The actions in the problem is also driving the car to the left or right.  A reward of -1 is given for every step until reaching the goal.  
