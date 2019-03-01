@@ -351,15 +351,23 @@ The <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon" title=
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathrm{Regret}(T)\geq{d{M_T}}" title="a"/>
 
-where <img src="https://latex.codecogs.com/svg.latex?\Large&space;M_T" title="a"/> is the number of times a non-best arm is selected by the algorithm. Now, for the <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon" title="a"/>-greedy algorithm, at each time step, a non-best arm is pulled with probability at least <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon/k" title="a"/>, which combined with the law of large numbers yields <img src="https://latex.codecogs.com/svg.latex?\Large&space;\lim_{T\rightarrow\infty}M_T/T\geq\epsilon/k" title="a"/>. Therefore, it follows
+where <img src="https://latex.codecogs.com/svg.latex?\Large&space;M_T" title="a"/> is the number of times a non-best arm is selected by the algorithm. 
+
+Now, for the <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon" title="a"/>-greedy algorithm, at each time step, a non-best arm is pulled with probability at least <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon/k" title="a"/>, which combined with the law of large numbers yields 
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;\lim_{T\rightarrow\infty}M_T/T\geq\epsilon/k" title="a"/>. 
+
+Therefore, it follows
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathrm{Regret}(T)=\Omega(T)" title="a"/> with high probability.
 
 The question is whether there exists an algorithm that can guarantee a sublinear growth of regret with time <img src="https://latex.codecogs.com/svg.latex?\Large&space;T" title="a"/>. 
 
-It is well known that for stochastic multi-armed bandit problems the optimal growth of the regret is logarithmic in <img src="https://latex.codecogs.com/svg.latex?\Large&space;T" title="a"/>. This optimal regret growth can be achieved by an <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon_t" title="a"/>-greedy algorithm for which the probability of making an explorative step <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon_t" title="a"/> eventually decreases with time <img src="https://latex.codecogs.com/svg.latex?\Large&space;t" title="a"/> in a specific way. Concretely, this holds by defining 
+It is well known that for stochastic multi-armed bandit problems the optimal growth of the regret is logarithmic in <img src="https://latex.codecogs.com/svg.latex?\Large&space;T" title="a"/>. 
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon_t = \max\left\{\frac{ck}{d^2 t},1\right\}" title="a"/>
+This optimal regret growth can be achieved by an <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon_t" title="a"/>-greedy algorithm for which the probability of making an explorative step <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon_t" title="a"/> eventually decreases with time <img src="https://latex.codecogs.com/svg.latex?\Large&space;t" title="a"/> in a specific way. Concretely, this holds by defining 
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon_t = \min\left\{\frac{ck}{d^2 t},1\right\}" title="a"/>
 
 where <img src="https://latex.codecogs.com/svg.latex?\Large&space;c>0" title="a"/> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;0<d<1" title="a"/> are parameters.
 
