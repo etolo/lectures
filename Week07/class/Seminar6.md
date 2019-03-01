@@ -30,7 +30,6 @@ The acrobot system includes two joints and two links, where the joint between th
 
 ### Atari
 Teach the agent to learn to play Atari games
-![Atari game](https://github.com/lse-st449/lectures/raw/master/Week07/class/graphs/atari1.mp4)
 
 <a href="https://github.com/lse-st449/lectures/raw/master/Week07/class/graphs/atari1.mp4
 " target="_blank"><img src="https://github.com/lse-st449/lectures/raw/master/Week07/class/graphs/Screenshot_atari1.png" 
