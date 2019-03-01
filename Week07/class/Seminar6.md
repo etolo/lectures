@@ -39,7 +39,7 @@ alt="atari" width="450" height="450" border="10" /></a>
 " target="_blank"><img src="https://github.com/lse-st449/lectures/raw/master/Week07/class/graphs/Screenshot_boxing.png" 
 alt="boxing" width="450" height="450" border="10" /></a>
 
-### MoJoCo
+### MuJoCo
 Continuous control tasks, running in a fast physics simulator. 
 
 <a href="https://github.com/lse-st449/lectures/raw/master/Week07/class/graphs/ant_v2.mp4
