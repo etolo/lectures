@@ -405,7 +405,7 @@ def step(action):
 - Compare the regret for different <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon" title="a" /> values
   - Take <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon=0.05,0.1,0.2" title="a"  /> 
 - Implement the <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon_t" title="a" />-greedy algorithm with <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon_t" title="a"/> as defined above 
-  - Set <img src="https://latex.codecogs.com/svg.latex?\Large&space;c=0.1" title="a" /> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;d=0.3" title="a" /> (note this is the gap between the expected of the best arm and the second best (non-best) arm
+  - Set <img src="https://latex.codecogs.com/svg.latex?\Large&space;c=0.1" title="a" /> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;d=0.3" title="a" /> (note this is the gap between the expected reward of the best arm and the second best (non-best) arm
 - In each case, run a total number of 50 runs with each run consisting of 1000 time steps
 - Compute the average regret at each time step for 50 trials
 - Plot the cumulative regrets vs the number of time steps
