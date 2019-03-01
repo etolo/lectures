@@ -385,7 +385,7 @@ This result follows from Theorem 3 in the paper [Auer, Cesa-Bianchi and Fischer 
 
 The goal of this exercise is to empirically evaluate the regret of <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon" title="a"/>-greedy and <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon_t" title="a"/>-greedy algorithms and compare with above theoretical considerations. 
 
-- Environment setup 
+- Environment setup: 
   - Assume k = 4
   - The reward of each arm follows a Bernoulli distribution
   - The Bernoulli parameters <img src="https://latex.codecogs.com/svg.latex?\Large&space;p=[0.1,0.4,0.1,0.1]" title="a" />  for the arm rewards
