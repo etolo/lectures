@@ -341,7 +341,7 @@ As discussed in Lecture 6, the k-armed bandit problem is a classic learning prob
 
 In this exercise, our goal is to implement and evaluate the performance of the <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon" title="a"/>-greedy algorithm for the four Bernoulli arms example covered in the lecture.
 
-**Additional background on multi-arm bandits and regret**
+**Additional background for regret and stochastic multi-arm bandits**
 
 Recall that the <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon" title="a"/>-greedy algorithm at each decision time, makes a greedy choice with probability <img src="https://latex.codecogs.com/svg.latex?\Large&space;1-\epsilon" title="a"/>, and, otherwise, makes an explorative step by selecting an arm uniformly at random from the set of all arms. We have discussed in the lecture how adding such an explorative step can outperform a greedy algorithm (that always makes greedy choices) with respect to different performance metrics. In particular, we considered the regret defined as follows  
 
