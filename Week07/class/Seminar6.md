@@ -171,7 +171,7 @@ print(env.observation_space.low)
 >>>[4.8000002e+00 3.4028235e+38 4.1887903e-01 3.4028235e+38] 
    [-4.8000002e+00 -3.4028235e+38 -4.1887903e-01 -3.4028235e+38]
 ```
-The angle boundary is calculated by $`24 * 2 * \pi /360`$.  When angle value lies outside `(-0.209, 0.209)` (computed by $`± 12 * 2 * \pi /360`$), you will fail the episode. 
+The angle boundary is calculated by <img src="https://latex.codecogs.com/svg.latex?\Large&space;24*2*\pi/360" title="a"/>.  When angle value lies outside `(-0.209, 0.209)` (computed by <img src="https://latex.codecogs.com/svg.latex?\Large&space;±12*2*\pi/360" title="a"/>), you will fail the episode. 
 
 ### Start the process
 Start the process by calling `env.reset()`.  This function creates a new environment and returns an initial observation. 
