@@ -77,7 +77,7 @@ Newly released platform for RL research on games.
 " target="_blank"><img src="https://github.com/lse-st449/lectures/raw/master/Week07/class/graphs/Screenshot_ferrari.png" 
 alt="racing" width="450" height="450" border="10" /></a>
 
-<a href="https://github.com/lse-st449/lectures/raw/master/Week07/class/graphs/gradius.mp4
+<a href="https://github.com/lse-st449/lectures/raw/master/Week07/class/graphs/gradius3.mp4
 " target="_blank"><img src="https://github.com/lse-st449/lectures/raw/master/Week07/class/graphs/Screenshot_gradius.png" 
 alt="Gradius" width="450" height="450" border="10" /></a>
 
