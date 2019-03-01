@@ -336,10 +336,9 @@ And modify the execution part:
 ```
 episodes = 10
 for i in range(episodes):
-  env.reset()
+  obs = env.reset()
   done = False
-  obs, r, _, _ = env.step(env.action_space.sample())
-  rewards = r
+  rewards = 0.0
   while not done and rewards < 200:
     frames.append(env.render(mode = 'rgb_array'))
     a = action(obs[2])
