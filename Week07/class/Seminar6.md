@@ -7,43 +7,43 @@ The gym library developed by OpenAI is a collection of test problems — **envir
 Environments available in the gym include classic control, algorithmic, Atari and 2D and 3D robots tasks, from easy to difficult level.  
 ### Classic control 
 Classic control problems from RL literature.   
-![Cartpole](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar6/graphs/Cart-Pole.mp4)
+![Cartpole](https://github.com/lse-st449/lectures/raw/master/Week07/class/graphs/Cart-Pole.mp4)
 A pole is attached by an un-actuated joint to a cart, which moves along a frictionless track. The actions one could take are pushing the cart to the left or right.   The goal is to prevent the pendulum from falling over.  A reward of +1 is given for every step that the pendulum remains upright. 
 
-![Mountain Car](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar6/graphs/mountain_car.mp4)
+![Mountain Car](https://github.com/lse-st449/lectures/raw/master/Week07/class/graphs/mountain_car.mp4)
 A car is stuck in a valley. The goal is to drive up the mountain and reach where the flat is.  However, the car's engine is not strong enough climb to the top in a single run. The way to succeed is to drive back and forth to build up momentum.  The actions in the problem is also driving the car to the left or right.  A reward of -1 is given for every step until reaching the goal.  
 
-![Acrobot](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar6/graphs/acrobot.mp4)
+![Acrobot](https://github.com/lse-st449/lectures/raw/master/Week07/class/graphs/acrobot.mp4)
 The acrobot system includes two joints and two links, where the joint between the two links is actuated. Initially, the links are hanging downwards, and the goal is to swing the end of the lower link up to a given height.
 
 ### Atari
 Teach the agent to learn to play Atari games
-![Atari game](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar6/graphs/atari1.mp4)
-![Boxing](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar6/graphs/boxing.mp4)
+![Atari game](https://github.com/lse-st449/lectures/raw/master/Week07/class/graphs/atari1.mp4)
+![Boxing](https://github.com/lse-st449/lectures/raw/master/Week07/class/graphs/boxing.mp4)
 
 ### MoJoCo
 Continuous control tasks, running in a fast physics simulator. 
-![Ant walking](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar6/graphs/ant_v2.mp4)
+![Ant walking](https://github.com/lse-st449/lectures/raw/master/Week07/class/graphs/ant_v2.mp4)
 Make a four-legged creature walk as fast as possible. 
 
-![Learning to walk](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar6/graphs/Learning_to_walk.mp4)
+![Learning to walk](https://github.com/lse-st449/lectures/raw/master/Week07/class/graphs/Learning_to_walk.mp4)
 Make a three-dimensional bipedal robot walk forward as fast as possible. [This link](https://youtu.be/07eIebEk1MM) gives you an idea about the goal we try to achieve.   
 
 ### Robotics
 Simulated goal-based tasks for the Fetch and ShadowHand robots.
 
-![Fetch, pick and place](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar6/graphs/fetch_pick_place.mp4)
+![Fetch, pick and place](hhttps://github.com/lse-st449/lectures/raw/master/Week07/class/graphs/fetch_pick_place.mp4)
 A goal is randomly chosen in 3D space. Control Fetch's end effector to grasp and lift the block up to reach that goal.
 
-![robotics](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar6/graphs/robotics.mp4)
+![robotics](https://github.com/lse-st449/lectures/raw/master/Week07/class/graphs/robotics.mp4)
 A goal orientation is randomly chosen for a block which is placed in a robot hand. The end goal is to control the robot hand to reach the given target orientation for the block.
 
 ### Gym Retro
 Newly released platform for RL research on games. 
-![Racing](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar6/graphs/ferrari.mp4)
-![Gradius](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar6/graphs/gradius3.mp4)
+![Racing](https://github.com/lse-st449/lectures/raw/master/Week07/class/graphs/ferrari.mp4)
+![Gradius](https://github.com/lse-st449/lectures/raw/master/Week07/class/graphs/gradius3.mp4)
 
-![Various games available](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar6/graphs/multi_games.mp4)
+![Various games available](https://github.com/lse-st449/lectures/raw/master/Week07/class/graphs/multi_games.mp4)
 
 To check the list of environments available in your installation, 
 ```
@@ -170,7 +170,7 @@ env.close()
 ```
 You should see a window pop up rendering the Cart-pole problem. 
 
-![Cart-pole problem](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar6/graphs/Cart-Pole.mp4)
+![Cart-pole problem](https://github.com/lse-st449/lectures/raw/master/Week07/class/graphs/Cart-Pole.mp4)
 
 It's a little bit more complicated in Google Colab as you will have to record the frames of the games and render the display through HTML.
 
@@ -214,7 +214,7 @@ HTML(ani.to_jshtml())
 
 You should be able to see an animation in the output cell:
 
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar6/graphs/cart_pole_colab.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week07/class/graphs/cart_pole_colab.png)
 
 ### Save the video
 If you are using an IDE, simply add the following code before calling reset
