@@ -133,7 +133,7 @@ This problem is described in the lecture and in **Example 4.3** in Sutton & Bart
    - the gambler wins as much money as he has staked on this flip
 - else: 
    - The gambler loses his stake
-- The game ends when the gambler reaches her/his goal of $100 or loses all the money
+- The game ends when the gambler reaches his goal of $100 or loses all the money
 - Formulated as an undiscounted, episodic, finite MDP problem
 - Pr[outcome of coin flip is heads] =p (known parameter)
 
