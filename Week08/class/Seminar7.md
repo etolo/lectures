@@ -340,7 +340,7 @@ for e in range(episodes):
 ```
 After 10,000 iterations,
 
-<img src="https://github.com/lse-st449/lectures/blob/master/Week08/class/graphs/10000policy_with_ace.png" width="550"/> <img src="https://github.com/lse-st449/lectures/blob/master/Week08/class/graphs/10000policy_without_ace.png" width="550"/> 
+<img src="https://github.com/lse-st449/lectures/blob/master/Week08/class/graphs/10000policy_with_ace.png" width="550"/><img src="https://github.com/lse-st449/lectures/blob/master/Week08/class/graphs/10000policy_without_ace.png" width="550"/> 
 
 After 500,000 iterations,
 
