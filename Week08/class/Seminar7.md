@@ -4,7 +4,7 @@
 ### Gridworld problem 
 The problem is described in the lecture and in **Example 4.1** in Sutton & Barto. 
 
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar7/graphs/girdworld.png)
+![alt text](https://github.com/lse-st449/lectures/blob/master/Week08/class/graphs/girdworld.png)
 
 - This is a undiscounted episodic task
 - Action set for state s: A(s) = {up, down, left, right}
@@ -72,7 +72,7 @@ def grid_world():
 ```
 In the end, the transition matrix is returned after the function is called. The transition matrix is essentially a look-up table:
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar7/graphs/transition_prob.png" width="850" height="400"/>
+<img src="https://github.com/lse-st449/lectures/blob/master/Week08/class/graphs/transition_prob.png" width="850" height="400"/>
 
 **Warning:** Make sure you are using **Numpy version-1.15.4** or above to use `np.nditer` module.  In Google Colab, you will run into an error - `AttributeError: __enter__`. That's because Google Colab uses an older version of Numpy.  Upgrade your numpy by 
 ```
@@ -83,7 +83,7 @@ in the header, reset the runtime and run the code again.
 ### Iterative policy evaluation
 Assume that the initial policy is uniform, we then implement the iterative policy evaluation algorithm using this "look-up table": 
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar7/graphs/algo_iterative_policy.png" width="750" height="550"/>
+<img src="https://github.com/lse-st449/lectures/blob/master/Week08/class/graphs/algo_iterative_policy.png" width="750" height="550"/>
 
 
 ```
@@ -139,7 +139,7 @@ This problem is described in the lecture and in **Example 4.3** in Sutton & Bart
 
 **States**: There are 101 states,  <img src="https://latex.codecogs.com/svg.latex?\Large&space;s\in\{0,1,2,...,100\}" title="a" />
 
-**Actions**: The actions are stakes, <img src="https://latex.codecogs.com/svg.latex?\Large&space;a\in\{1,2,...,\min(s, 100-s)\}" title="a" /> 
+**Actions**: The actions are stakes, <img src="https://latex.codecogs.com/svg.latex?\Large&space;a\in\{1,2,...,\min(s,100-s)\}" title="a" /> 
 
 We also assume the probability of the coin coming up heads is 0.4. 
 
@@ -150,7 +150,7 @@ states = np.arange(goal + 1)
 p_head = 0.4
 ```
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar7/graphs/policy_iteration.png" width="850" height="550"/>
+<img src="https://github.com/lse-st449/lectures/blob/master/Week08/class/graphs/policy_iteration.png" width="850" height="550"/>
 
 Value iteration can be seen as a truncated version of policy iteration - when policy evaluation is stopped after just one sweep, it's called value iteration. In the policy evaluation step, state values are computed using iterative policy iteration.  
 ```
@@ -184,7 +184,7 @@ for s in states[1: goal]:
 ```
 The upper plot shows the state values computed by iterative policy evaluation and the lower plot shows the final optimal policy. 
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar7/graphs/policy.png" height="750"/> 
+<img src="https://github.com/lse-st449/lectures/blob/master/Week08/class/graphs/policy.png" height="750"/> 
 
 
 ## Monte Carlo methods
@@ -200,10 +200,10 @@ the dealer's one showing card (1-10 where 1 is ace), and whether or not the play
 
 ### Monte Carlo prediction
 Incremental mean: 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;\mu_k = \frac{1}{k} \sum_{j=1}^k x_j = \mu_{k-1} + \frac{1}{k}(x_k - \mu_{k-1})" title="a"/>
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;\mu_k=\frac{1}{k}\sum_{j=1}^kx_j=\mu_{k-1}+\frac{1}{k}(x_k-\mu_{k-1})" title="a"/>
 
 Incremental MC updates: 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;v^j(s_t) = v^{j-1}(s_t) + \frac{1}{N(s_t)}(G^j_t - v^{j-1}(s_t))" title="a"/>
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;v^j(s_t)=v^{j-1}(s_t)+\frac{1}{N(s_t)}(G^j_t-v^{j-1}(s_t))" title="a"/>
 
 where <img src="https://latex.codecogs.com/svg.latex?\Large&space;G^j_t" title="a"/>  is the total return at j'th episode and <img src="https://latex.codecogs.com/svg.latex?\Large&space;N(s_t)" title="a"/>  is the number of times state <img src="https://latex.codecogs.com/svg.latex?\Large&space;s_t" title="a"/> was visited - **the every-visit MC method**.
 
@@ -266,11 +266,11 @@ for e in range(episodes):
 
 After 10,000 iterations,
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar7/graphs/10000with_ace.png" width="550"/> <img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar7/graphs/10000without_ace.png" width="550"/> 
+<img src="https://github.com/lse-st449/lectures/blob/master/Week08/class/graphs/10000with_ace.png" width="550"/> <img src="https://github.com/lse-st449/lectures/blob/master/Week08/class/graphs/10000without_ace.png" width="550"/> 
 
 After 500,000 iterations,
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar7/graphs/500000with_ace.png" width="550"/> <img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar7/graphs/500000without_ace.png" width="550"/> 
+<img src="https://github.com/lse-st449/lectures/blob/master/Week08/class/graphs/500000with_ace.png" width="550"/> <img src="https://github.com/lse-st449/lectures/blob/master/Week08/class/graphs/500000without_ace.png" width="550"/> 
 
 ### Monte Carlo control
 
@@ -340,11 +340,11 @@ for e in range(episodes):
 ```
 After 10,000 iterations,
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar7/graphs/10000policy_with_ace.png" width="550"/> <img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar7/graphs/10000policy_without_ace.png" width="550"/> 
+<img src="https://github.com/lse-st449/lectures/blob/master/Week08/class/graphs/10000policy_with_ace.png" width="550"/> <img src="https://github.com/lse-st449/lectures/blob/master/Week08/class/graphs/10000policy_without_ace.png" width="550"/> 
 
 After 500,000 iterations,
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar7/graphs/500000policy_with_ace.png" width="550"/> <img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar7/graphs/500000policy_without_ace.png" width="550"/> 
+<img src="https://github.com/lse-st449/lectures/blob/master/Week08/class/graphs/500000policy_with_ace.png" width="550"/> <img src="https://github.com/lse-st449/lectures/blob/master/Week08/class/graphs/500000policy_without_ace.png" width="550"/> 
 
 ## Homework: 
 
