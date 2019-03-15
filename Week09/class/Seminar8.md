@@ -440,15 +440,7 @@ The starting state is still the centre state.
 
 **Task**:
 - Implement the off-line <img src="https://latex.codecogs.com/svg.latex?\Large&space;\lambda" title="e" />-return / TD(<img src="https://latex.codecogs.com/svg.latex?\Large&space;\lambda" title="e"/>) algorithm, where the <img src="https://latex.codecogs.com/svg.latex?\Large&space;\lambda" title="e" />-return  is defined as
- <img src="https://latex.codecogs.com/svg.latex?\Large&space;R^{\lambda}_t=(1-\lambda)\sum_{n=1}^{T-t-1}\lambda^{n-1}R^{(n)}_t+\lambda^{T-t-1}R_t" title="e" />
- 
-and TD(<img src="https://latex.codecogs.com/svg.latex?\Large&space;\lambda" title="e"/>)  error is 
-
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;\Delta{V_t(s_t)}=\alpha[R_t^{\lambda}-V_t(s_t)}]" title="e"/>
- 
-The updating rule is 
-
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;V_{t+1}(s_t)\leftarrow{V_t(s_t)+\Delta{V_t(s_t)}" title="e"/>
+![alt txt](https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/hw_eq.png)
  
 - Compare the RMS error averaged over the 19 states, over the first 10 episodes, and over 100 runs (100 different sequence of walks). 
 - Plot the averaged RMS error vs <img src="https://latex.codecogs.com/svg.latex?\Large&space;{\alpha}" title="e"/> values for the following <img src="https://latex.codecogs.com/svg.latex?\Large&space;\lambda" title="e"/> values:
