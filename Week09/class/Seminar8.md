@@ -443,7 +443,7 @@ The starting state is still the centre state.
 ![alt txt](https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/hw_eq.png)
  
 - Compare the RMS error averaged over the 19 states, over the first 10 episodes, and over 100 runs (100 different sequence of walks). 
-- Plot the averaged RMS error vs <img src="https://latex.codecogs.com/svg.latex?\Large&space;{\alpha}" title="e"/> values for the following <img src="https://latex.codecogs.com/svg.latex?\Large&space;\lambda" title="e"/> values:
+- Plot the averaged RMS error vs `alpha` values for the following <img src="https://latex.codecogs.com/svg.latex?\Large&space;\lambda" title="e"/> values:
  
 ![alt text](https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/td_lam.png)
 
@@ -463,5 +463,5 @@ alphas = [np.arange(0, 1.1, 0.1),
 
 
 **Hints:**
-- Implement the algotithm with a function that takes  <img src="https://latex.codecogs.com/svg.latex?\Large&space;{\alpha}" title="e"/> and <img src="https://latex.codecogs.com/svg.latex?\Large&space;\lambda" title="e"/> as arguments and iterate through the parameters given above. 
+- Implement the algotithm with a function that takes `alpha` and <img src="https://latex.codecogs.com/svg.latex?\Large&space;\lambda" title="e"/> as arguments and iterate through the parameters given above. 
 - The same sets of walks are used for all methods. 
