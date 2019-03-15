@@ -63,7 +63,7 @@ class RandomWalk:
         self.state = self.initial_state  
         self.reward = 0.0  
         self.is_terminal = False  
-    return self.state
+        return self.state
 ```
 ### Random policy 
 A policy that takes a random action (0, 1):
