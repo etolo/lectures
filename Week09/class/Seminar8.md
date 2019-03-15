@@ -10,9 +10,7 @@ Specifically, we will consider examples in which we use the following solution m
 
 The learning methods considered are based on backups which for dynamic programming, Monte Carlo, and temporal-difference learning can be represented as follows:
 
-<img src="https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/dp.png" width="300" height="220"> 
-<img src="https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/mc.png" width="300" height="220"> 
-<img src="https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/td.png" width="300" height="220">
+<img src="https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/dp.png" width="280" height="220"> <img src="https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/mc.png" width="280" height="220"> <img src="https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/td.png" width="280" height="220">
 
 ## A. The Random Walk problem 
 
@@ -455,7 +453,7 @@ The updating rule is
 - Compare the RMS error averaged over the 19 states, over the first 10 episodes, and over 100 runs (100 different sequence of walks). 
 - Plot the averaged RMS error vs <img src="https://latex.codecogs.com/svg.latex?\Large&space;{\alpha}" title="e"/> values for the following <img src="https://latex.codecogs.com/svg.latex?\Large&space;\lambda" title="e"/> values:
  
- ![alt text](https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/td_lam.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/td_lam.png)
 
 parameter settings: 
 ```
