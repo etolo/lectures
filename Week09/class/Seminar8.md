@@ -10,9 +10,9 @@ Specifically, we will consider examples in which we use the following solution m
 
 The learning methods considered are based on backups which for dynamic programming, Monte Carlo, and temporal-difference learning can be represented as follows:
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar8/graphs/dp.png" width="300" height="220"> 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar8/graphs/mc.png" width="300" height="220"> 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar8/graphs/td.png" width="300" height="220">
+<img src="https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/dp.png" width="300" height="220"> 
+<img src="https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/mc.png" width="300" height="220"> 
+<img src="https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/td.png" width="300" height="220">
 
 ## A. The Random Walk problem 
 
@@ -20,7 +20,7 @@ The goal of this exercise is to implement and evaluate the TD(0) method and comp
 
 The Random Walk problem is defined in **Example 6.2** in Sutton & Barto. We introduced it in slide 10 of the lecture notes.
 
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar8/graphs/random_walk.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/random_walk.png)
 
 ### The environment 
 
@@ -77,7 +77,7 @@ def take_random_action():
 
 Our goal is to estimate the value function using the TD(0) algorithm, which was described in the lecture notes:
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar8/graphs/td_algo.png" width="800" height="450">
+<img src="https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/td_algo.png" width="800" height="450">
 
 Implement the TD algorithm with step size = 0.1 and no discount:
 ```
@@ -114,7 +114,7 @@ true_values[1:6] = np.arange(1, 6) / 6.0
 true_values[6] = 1.0  
 plot_state_value(value_history, true_values)
 ```
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar8/graphs/TD_random_walkzero.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/TD_random_walkzero.png)
 
 To replicate the result in the book, we **assume all rewards are 0**,  the left terminal state has value 0, and the right terminal state has value 1. All other states have initial value of 0.5, i.e., 
 ```
@@ -122,7 +122,7 @@ values = np.zeros(7)
 values[1:6] = 0.5  
 values[6] = 1.0
 ```
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar8/graphs/TD_random_walk.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/TD_random_walk.png)
 
 ### Comparison of MC and TD(0)
 
@@ -131,14 +131,14 @@ The RMS is defined for the difference between the estimated value function and t
 The true value function is the solution of the Bellman equation, and was given in the lectures. 
 
 The following plot compares the average RMS errors over non-terminal states found by TD(0) and constant-<img src="https://latex.codecogs.com/svg.latex?\Large&space;\alpha" title="a" /> MC.  All non-terminal states were initialised to value 0.5: 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar8/graphs/rms.png" width="850" height="400">
+<img src="https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/rms.png" width="850" height="400">
 
 ## B. The Windy GridWorld problem
 
 The goal of this exercise is implement and evaluate SARSA algorithm for the Windy GridWorld problem which is defined as follows.
 
 The Windy GridWorld problem is described in **Example 6.5** in Sutton & Barto. 
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar8/graphs/windy_grid.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/windy_grid.png)
 
 The Windy Gridworld problem is a standard gridworld with a crosswind upward through the middle of the grid. The strength of the wind is indicated by the number below each column.  For example, if you are in the cell to the right of the goal, the action left will take you to the cell above the goal.  To be precise, the next cell you will end up in depends on the action taken and the wind in the current cell. 
 - An undiscounted episodic task
@@ -211,9 +211,9 @@ def epsilon_greedy_policy(q_values, epsilon=0.1):
 ```
 
 ### The algorithm: 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar8/graphs/sarsa.png" width="750" height="100">
+<img src="https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/sarsa.png" width="750" height="100">
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar8/graphs/sarsa_algo.png" width="800" height="450">
+<img src="https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/sarsa_algo.png" width="800" height="450">
 
 ```
 def sarsa(qsa, next_qsa, r, alpha=0.1, gamma=1.0):  
@@ -256,7 +256,7 @@ for i in range(1, episodes + 1):
 ```
 plot_episode_steps(timesteps, episodes)
 ```
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar8/graphs/windy_grid_timesteps.png" width="700" height="500">
+<img src="https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/windy_grid_timesteps.png" width="700" height="500">
 
 In this problem, the only way to terminate an episode is to reach the goal state.  The increasing slope of the graph shows that the steps taken by the agent to reach the goal is decreasing per episode. 
 
@@ -266,7 +266,7 @@ By the end of 1000 episodes, we choose a greedy policy
 optimal_policy = np.argmax(q_sa, axis=2)
 ```
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar8/graphs/optimal_actions.png" width="850" height="200">
+<img src="https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/optimal_actions.png" width="850" height="200">
 
 ```
 >>>
@@ -286,7 +286,7 @@ Optimal policy is:
 In this exercise, our goal is to implement and evaluate Q-learning algorithm for the Cliff Walking problem, and compare with SARSA.
 
 The Cliff Walking problem is described in **Example 6.6** in Sutton & Barto.
- ![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar8/graphs/cliff_walking.png)
+ ![alt text](https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/cliff_walking.png)
 - This is a standard undiscounted and episodic gridworld problem with starting and goal states
 - Rewards of -1 for each move
 - Stepping into the region marked "The Cliff" incurs a reward of -100 and sends the agent instantly back to the start state
@@ -350,11 +350,11 @@ def is_cliff(self):
 ```
 The first two lines create a matrix as below, 
 
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar8/graphs/cliff.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/cliff.png)
 
 ### The Q-learning algorithm
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar8/graphs/q_learning_algo.png" width="750" height="450">
+<img src="https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/q_learning_algo.png" width="750" height="450">
 
 Note that you need to pass all the state-action pairs of the next state,
 ```  
@@ -414,7 +414,7 @@ for r in range(runs):
 
 The comparison of the two methods:
 
-![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar8/graphs/cliff_walking_comparison.png)
+![alt text](https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/cliff_walking_comparison.png)
 
 With limited computational power, it's difficult to replicate the result in the book exactly. The worse performance of Q-learning method is due to the <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon" title="e" />-greedy policy which results in the agent's occasionally falling off the cliff when the method takes the optimal rather than safer path. 
 
@@ -455,7 +455,7 @@ The updating rule is
 - Compare the RMS error averaged over the 19 states, over the first 10 episodes,  and over 100 runs (100 different sequence of walks). 
 - Plot the averaged RMS error vs <img src="https://latex.codecogs.com/svg.latex?\Large&space;\alpha" title="e"/> values for the following <img src="https://latex.codecogs.com/svg.latex?\Large&space;\lambda" title="e"/> values:
  
- ![alt text](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar8/graphs/td_lam.png)
+ ![alt text](https://github.com/lse-st449/lectures/raw/master/Week09/class/graphs/td_lam.png)
 
 parameter settings: 
 ```
