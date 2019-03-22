@@ -65,7 +65,7 @@ The Mountain Car problem is described in **Example 10.1** (2nd Edition) in Sutto
 The basic idea is driving the car to reach the goal position by building up momentum. 
 We will use the existing environment in OpenAI Gym (ID: MountainCar-v0).
 
-<img  src="https://github.com/lse-st449/lectures/raw/master/Week10/class/graphs/Screenshot_mcar.png"  width="550"/>
+<img  src="https://github.com/lse-st449/lectures/raw/master/Week10/class/graphs/Screenshot_mcar.png"  width="500"/>
 
 - The goal is to reach the flag position
 - Actions = [push left (0), no push (1), push right (2)]
@@ -302,13 +302,16 @@ The first plot is after 4 episodes, whilst the second one is after 100 episodes
 As we can see, the optimal policy after 4 episodes of training is not good enough to solve the task.
 
 
-![Mountain Car](https://github.com/lse-st449/lectures/raw/master/Week10/class/graphs/4episodes.mp4)
+<a href="https://github.com/lse-st449/lectures/raw/master/Week10/class/graphs/4episodes.mp4
+" target="_blank"><img src="https://github.com/lse-st449/lectures/raw/master/Week10/class/graphs/Screenshot_mcar.png" 
+alt="MountainCar100episodes" width="500" height="400" border="10" /></a>
 
   
 Policy after 100 episodes,
 
-
-![Mountain Car](https://github.com/lse-st449/lectures/raw/master/Week10/class/graphs/100episodes.mp4)
+<a href="https://github.com/lse-st449/lectures/raw/master/Week10/class/graphs/100episodes.mp4
+" target="_blank"><img src="https://github.com/lse-st449/lectures/raw/master/Week10/class/graphs/Screenshot_mcar.png" 
+alt="MountainCar100episodes" width="500" height="400" border="10" /></a>
 
 
 To replicate the results in the Sutton & Barto book, we observe that the action-values indeed display a spiral shape.
