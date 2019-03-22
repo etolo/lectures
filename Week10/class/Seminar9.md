@@ -113,7 +113,7 @@ The following code creates an instance of the sklearn StandardScaler class which
 ```
 scaler = sklearn.preprocessing.StandardScaler().fit(obs_samples)
 ```
-When new observation comes in, we can simply call 
+When a new observation comes in, we can simply call 
 ```
 scaled_state = self.__scaler.transform([state])
 ```
