@@ -145,18 +145,8 @@ The `.transform()` method of the `scaler` returns the centred and scaled samples
 features = featuriser.transform(scaled)
 ```
 
-Now the `scaler` and `featuriser` are ready for later use.  When we obtain a new state, we can transform it to feature vectors easily:
+Now the `scaler` and `featuriser` are ready for later use.  When we obtain a new state, we can transform it to feature vectors easily.
 
-```
-def feature_transformation(self, state):
-
-scaled = scaler.transform([state])
-
-features = featuriser.transform(scaled)
-
-return features
-
-```
 
 ### Control with function approximation
 
