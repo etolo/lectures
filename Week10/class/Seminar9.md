@@ -115,7 +115,7 @@ scaler = sklearn.preprocessing.StandardScaler().fit(obs_samples)
 ```
 When a new observation comes in, we can simply call 
 ```
-scaled_state = caler.transform([state])
+scaled_state = scaler.transform([state])
 ```
 to normalize the latest observed state.  
 
