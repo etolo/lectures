@@ -115,7 +115,7 @@ scaler = sklearn.preprocessing.StandardScaler().fit(obs_samples)
 ```
 When a new observation comes in, we can simply call 
 ```
-scaled_state = self.__scaler.transform([state])
+scaled_state = caler.transform([state])
 ```
 to normalize the latest observed state.  
 
@@ -142,7 +142,7 @@ featuriser.fit(scaler.transform(obs_samples))
 
 The `.transform()` method of the `scaler` returns the centred and scaled samples.
 ```
-features = self.__featuriser.transform(scaled)
+features = featuriser.transform(scaled)
 ```
 
 Now the `scaler` and `featuriser` are ready for later use.  When we obtain a new state, we can transform it to feature vectors easily:
