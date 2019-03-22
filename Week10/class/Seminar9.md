@@ -176,7 +176,7 @@ or a Q-learning target,
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q(s_t,a_t)=r_{t+1}+\gamma\max_{a'}\hat{Q}(s_{t+1},a',\mathbf{w}_t)" title="x"/>
 
-In the following implementation, we choose the SARSA target as a substitution to the true state-action values The update for parameter  <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathbf{w}" title="x"/> is therefore 
+In the following implementation, we choose the SARSA target as a substitution to the true state-action values. The update for parameter  <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathbf{w}" title="x"/> is therefore 
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathbf{w}_{t+1}=\mathbf{w}_t+{\eta}(r_{t+1}+\gamma\hat{Q}(s_{t+1},a_{t+1},\mathbf{w}_t)-\hat{Q}(s_t,a_t,\mathbf{w}_t))\phi(s_t,a_t)" title="x"/>
 
