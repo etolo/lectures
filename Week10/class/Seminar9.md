@@ -54,18 +54,18 @@ In our case, learning is done by the end of an entire episode using data collect
 
 What you have learned in the lecture: 
 
-<img  src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar9/graphs/linear_feature.png"  width="550"/>
+<img  src="https://github.com/lse-st449/lectures/raw/master/Week10/class/graphs/linear_feature.png"  width="550"/>
 
 ### Control with function approximation
 
-<img  src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar9/graphs/control_approx.png"  width="650"/>
+<img  src="https://github.com/lse-st449/lectures/raw/master/Week10/class/graphs/control_approx.png"  width="650"/>
 
 ## The Mountain Car Problem 
 The Mountain Car problem is described in **Example 10.1** (2nd Edition) in Sutton & Barto. 
 The basic idea is driving the car to reach the goal position by building up momentum. 
 We will use the existing environment in OpenAI Gym (ID: MountainCar-v0).
 
-<img  src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar9/graphs/Screenshot_mcar.png"  width="550"/>
+<img  src="https://github.com/lse-st449/lectures/raw/master/Week10/class/graphs/Screenshot_mcar.png"  width="550"/>
 
 - The goal is to reach the flag position
 - Actions = [push left (0), no push (1), push right (2)]
@@ -76,7 +76,8 @@ We will use the existing environment in OpenAI Gym (ID: MountainCar-v0).
 
 ### Feature engineering 
 There are many ways to create the feature vector of a state. We can either use handcrafted or learned features. For instance, AlphaGo uses handcrafted features:
-<img  src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar9/graphs/alpha_go_features.png"  width="650"/>
+
+<img  src="https://github.com/lse-st449/lectures/raw/master/Week10/class/graphs/alpha_go_features.png"  width="650"/>
 
 In reinforcement learning, the commonly used methods to extract features include tile-coding, kernel functions, or neural networks. 
 In this exercise, we will create the feature vectors using kernel methods. 
@@ -294,27 +295,27 @@ for i in range(1, episodes + 1):
 
 The first plot is after 4 episodes, whilst the second one is after 100 episodes
 
-<img  src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar9/graphs/mountain_car4epi.png"  width="550"/>  <img  src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar9/graphs/mountain_car.png"  width="550"/>
+<img  src="https://github.com/lse-st449/lectures/raw/master/Week10/class/graphs/mountain_car4epi.png"  width="550"/>  <img  src="https://github.com/lse-st449/lectures/raw/master/Week10/class/graphs/mountain_car.png"  width="550"/>
 
   
 
 As we can see, the optimal policy after 4 episodes of training is not good enough to solve the task.
 
 
-![Mountain Car](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar9/graphs/4episodes.mp4)
+![Mountain Car](https://github.com/lse-st449/lectures/raw/master/Week10/class/graphs/4episodes.mp4)
 
   
 Policy after 100 episodes,
 
 
-![Mountain Car](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar9/graphs/100episodes.mp4)
+![Mountain Car](https://github.com/lse-st449/lectures/raw/master/Week10/class/graphs/100episodes.mp4)
 
 
 To replicate the results in the Sutton & Barto book, we observe that the action-values indeed display a spiral shape.
 
 The left plot is after 1000 episodes, whilst the right one is after 9000 episodes,
 
-<img  src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar9/graphs/mountain_car1000epi.png"  width="550"/>  <img  src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar9/graphs/mountain_car9000epi.png"  width="550"/>
+<img  src="https://github.com/lse-st449/lectures/raw/master/Week10/class/graphs/mountain_car1000epi.png"  width="550"/>  <img  src="https://github.com/lse-st449/lectures/raw/master/Week10/class/graphs/mountain_car9000epi.png"  width="550"/>
 
 
 ## Deep Q-Networks (DQN) with experience replay
@@ -325,7 +326,7 @@ This exercise aims to replicate the results from the paper [ Human-level control
 
 ### Frame-skipping
 
-![](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar9/graphs/breakout_screenshots.png)
+![](https://github.com/lse-st449/lectures/raw/master/Week10/class/graphs/breakout_screenshots.png)
 
 
 These are 30 consecutive frames extracted from the game. If you execute an action in each frame, then there's **no** frame skipping.
@@ -338,7 +339,7 @@ In the **Methods** section of the paper, it is said:
 
 When k = 4, the skipped frames are indicted with an "X" as below:
 
-![](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar9/graphs/breakout_subsampled.png)
+![](https://github.com/lse-st449/lectures/raw/master/Week10/class/graphs/breakout_subsampled.png)
 
   
 Denote the frames left (the non-skipped ones) as $\{x_1, x_2, x_3, x_4, x_5, x_6, x_7 \}$. The states, also the inputs of the Q-network, are $S_1 = \{x_1, x_2, x_3, x_4\}$, $S_2 = \{x_2, x_3, x_4, x_5\}$ and so on.
@@ -387,7 +388,7 @@ def clipping_reward(r):
 Experience replay is a method that aims to prevent the network from diverging. The paper offered us a comparison of results with experience reply and without cross multiple games.
 
 
-<img  src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar9/graphs/replay_improvement.png"  width="550"/> 
+<img  src="https://github.com/lse-st449/lectures/raw/master/Week10/class/graphs/replay_improvement.png"  width="550"/> 
 
   
 
@@ -545,7 +546,7 @@ Write an epsilon-greedy policy function as described in the paper:
 
 The epsilon schedule looks like this:
 
-<img  src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar9/graphs/eps_anealing.png"  width="550"/> 
+<img  src="https://github.com/lse-st449/lectures/raw/master/Week10/class/graphs/eps_anealing.png"  width="550"/> 
 
 ### Huber loss function
 
@@ -556,7 +557,7 @@ Implement Huber loss function, defined as
 The blue line indicates quadratic loss and the green line shows Huber loss when <img src="https://latex.codecogs.com/svg.latex?\Large&space;\delta=1" title="x"/>:
 
 
-<img  src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar9/graphs/huber_loss.png"  width="550"/> 
+<img  src="https://github.com/lse-st449/lectures/raw/master/Week10/class/graphs/huber_loss.png"  width="550"/> 
 
 
 **Hints**:
