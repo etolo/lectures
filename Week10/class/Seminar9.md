@@ -345,7 +345,8 @@ When k = 4, the skipped frames are indicted with an "X" as below:
 ![](https://github.com/lse-st449/lectures/raw/master/Week10/class/graphs/breakout_subsampled.png)
 
   
-Denote the frames left (the non-skipped ones) as $\{x_1, x_2, x_3, x_4, x_5, x_6, x_7 \}$. The states, also the inputs of the Q-network, are $S_1 = \{x_1, x_2, x_3, x_4\}$, $S_2 = \{x_2, x_3, x_4, x_5\}$ and so on.
+Denote the frames left (the non-skipped ones) as 
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;\{x_1,x_2,x_3,x_4,x_5,x_6,x_7\}" title="x" />. The states, also the inputs of the Q-network, are <img src="https://latex.codecogs.com/svg.latex?\Large&space;S_1=\{x_1,x_2,x_3,x_4\}" title="x" />, <img src="https://latex.codecogs.com/svg.latex?\Large&space;S_2=\{x_2,x_3,x_4,x_5\}" title="x" /> and so on.
 
 
 ### Preprocessing
