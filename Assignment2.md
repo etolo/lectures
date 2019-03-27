@@ -42,7 +42,7 @@ Consider the same reinforcement learning problem as in P1 but for the following 
 
 1. **[max points 5]** Solve the problem by using Q-learning algorithm. Use <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon" title="x" />-greedy with <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon=0.1" title="x" />. 
 2. **[max points 5]** Solve the problem by using SARSA algorithm. Use <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon" title="x" />-greedy with  <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon=0.1" title="x" />.
-3. **[max points 15]** Solve the problem by using on-line TD(<img src="https://latex.codecogs.com/svg.latex?\Large&space;\lambda" title="x" />)-algorithm. Use the values of parameters <img src="https://latex.codecogs.com/svg.latex?\Large&space;\lambda=0.9" title="x" /> and step size <img src="https://latex.codecogs.com/svg.latex?\Large&space;\eta=0.0001" title="x" />.
+3. **[max points 15]** Assume that the agent follows a random policy, evaluate it by using on-line TD(<img src="https://latex.codecogs.com/svg.latex?\Large&space;\lambda" title="x" />)-algorithm. Use the values of parameters <img src="https://latex.codecogs.com/svg.latex?\Large&space;\lambda=0.9" title="x" /> and step size <img src="https://latex.codecogs.com/svg.latex?\Large&space;\eta=0.0001" title="x" />.
 
 In all questions, use the number of episodes equal to `500,000`. For each question report the estimated values and policy. 
 
