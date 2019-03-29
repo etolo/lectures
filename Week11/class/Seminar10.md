@@ -116,7 +116,7 @@ class Memory:
 Another source that may cause instability is the correlation between the estimates of the action-value function and the target. 
 For example, the DQN loss function at iteration <img src="https://latex.codecogs.com/svg.latex?\Large&space;t" title="q-learning-target" /> is defined as
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathcal{L}_t(\theta_t)=\mathbb{E}_{(s,a,r,s'){\sim}U(D)}[(r+\gamma \max_{a'}\hat{Q}(s',a';\theta_t)-\hat{Q}(s,a;\theta_t))^2]" title="q-learning-target" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathcal{L}_t(\theta_t)=\mathbb{E}_{(s,a,r,s'){\sim}U(D)}[(r+{\gamma}\max_{a'}\hat{Q}(s',a';\theta_t)-\hat{Q}(s,a;\theta_t))^2]" title="q-learning-target" />
 
 where <img src="https://latex.codecogs.com/svg.latex?\Large&space;r+{\gamma}\max_{a'}\hat{Q}(s',a';\theta_t)" title="q-learning-target" /> is the Q-learning target. 
 In DQN, both <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q(s',a';\theta_t)" title="target" /> that estimates the Q-learning target and 
@@ -126,7 +126,7 @@ The network that estimates the Q-learning target is usually called *target netwo
 
 The correlations between the estimates of action-value function and the target refer to the fact that the estimates computed by the two networks share the same set of parameters.  DQN gets around this problem by freezing the target network, i.e., 
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathcal{L}_t(\theta_t)=\mathbb{E}_{(s,a,r,s'){\sim}U(D)}[(r+\gamma \max_{a'}\hat{Q}(s',a';\theta_t^{-})-\hat{Q}(s,a;\theta_t))^2]" title="q-learning-target" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;\mathcal{L}_t(\theta_t)=\mathbb{E}_{(s,a,r,s'){\sim}U(D)}[(r+{\gamma}\max_{a'}\hat{Q}(s',a';\theta_t^{-})-\hat{Q}(s,a;\theta_t))^2]" title="q-learning-target" />
 
 During training, the policy network parameters <img src="https://latex.codecogs.com/svg.latex?\Large&space;\theta_t" title="q-learning-target" /> 
 are updated per time step, while the target network parameters <img src="https://latex.codecogs.com/svg.latex?\Large&space;\theta_t^{-}" title="q-learning-target" /> are only updated every <img src="https://latex.codecogs.com/svg.latex?\Large&space;N" title="q-learning-target" /> steps. 
