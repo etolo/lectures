@@ -183,7 +183,7 @@ def huber_loss(y_true, y_pred, clip_delta=1.0):
 
 So far we have completed the three major pieces of the algorithm provided in the paper:
 
-![](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar10/graphs/algorithm.png)
+![](https://github.com/lse-st449/lectures/raw/master/Week11/class/graphs/algorithm.png)
 
 **Note** that we do **not** optimise w.r.t the parameters of the target network. Instead, we copy the parameters of the policy network to the target network after a certain number of updates of the policy network.
 
@@ -199,11 +199,11 @@ Make sure that the two networks have the same initialisation.
 
 #### Hyperparameter settings:
 
-![](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar10/graphs/hyperparam.png)
+![](https://github.com/lse-st449/lectures/raw/master/Week11/class/graphs/hyperparam.png)
 #### Results
 Training curves tracking the agent’s average score and average predicted action-value.
 
-![](https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar10/graphs/dqn_results.png)
+![](https://github.com/lse-st449/lectures/raw/master/Week11/class/graphs/dqn_results.png)
 
 **Figure a**: each point is the average score achieved per episode on Space Invaders. **Figure b**: average score achieved per episode for Seaquest. 
 
@@ -275,7 +275,7 @@ for e in range(episodes):
 
 ### Pong game 
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar10/graphs/pong_game.png" width="750" height="500"/>
+<img src="https://github.com/lse-st449/lectures/raw/master/Week11/class/graphs/pong_game.png" width="750" height="500"/>
 
 - The agent controls one of the paddles to play against an AI player
 - Actions are move up or down
@@ -314,7 +314,7 @@ However, as there is always a mixture of good and bad actions in every episode, 
 
 ### The algorithm 
 
-<img src="https://gitlab.com/milanv/AI-and-Deep-Learning/raw/master/Seminars/Seminar10/graphs/policy_grad_algo.png" width="750" height="500"/>
+<img src="https://github.com/lse-st449/lectures/raw/master/Week11/class/graphs/policy_grad_algo.png" width="750" height="500"/>
 
 Before we start implementing the algorithm, we also need to preprocess the raw data which is of shape 210x160x3.  
 The input data is preprocessed into a long vector of size 6400 (80x80). 
