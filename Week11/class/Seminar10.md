@@ -6,7 +6,7 @@ Specifically, we will consider tricks such as experience replay and using a fixe
 We explained these tricks in the lecture. 
 
 ## DQN 
-One of the biggest chanllenges in RL is the instable training process in practice.  One cause of instability in RL are correlations of observations used for estimation of value and policy functions. 
+One of the biggest chanllenges in RL is the unstable training process in practice.  One cause of instability in RL are correlations of observations used for estimation of value and policy functions. 
 This problem is dealt with *experience replay* which stores sequences of observations (e.g. state, action and reward) into a memory and uses random samples 
 (minibatches) from this memory for learning purposes. Random sampling of minibatches makes correlations of used observation sequences smaller.  
 
