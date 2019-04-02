@@ -58,7 +58,7 @@ In each round, an amount of energy of value <img src="https://latex.codecogs.com
 
 The player can invest high effort in a round only if her energy level is at least <img src="https://latex.codecogs.com/svg.latex?\Large&space;c_H" title="x" />.
 
-The player receives a prize of value <img src="https://latex.codecogs.com/svg.latex?\Large&space;R" title="x" />if winning the game and this is the only reward received.
+The player receives a prize of value <img src="https://latex.codecogs.com/svg.latex?\Large&space;R" title="x" /> if winning the game and this is the only reward received.
 
 Use the following setting of parameters:
 * <img src="https://latex.codecogs.com/svg.latex?\Large&space;p_H=0.55" title="x" />
