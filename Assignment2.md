@@ -71,8 +71,8 @@ Use the following setting of parameters:
 * step size <img src="https://latex.codecogs.com/svg.latex?\Large&space;\eta=0.001" title="x" />
 * Discount parameter <img src="https://latex.codecogs.com/svg.latex?\Large&space;\gamma=0.9" title="x" />
 
-1. Solve this problem by using SARSA(<img src="https://latex.codecogs.com/svg.latex?\Large&space;\lambda" title="x" />) algorithm, for the value of parameter <img src="https://latex.codecogs.com/svg.latex?\Large&space;\lambda=0.9" title="x" />. Use `500,000` episodes. 
-Show the estimated action values for different states and policy. Discuss the results. 
+1. Solve this problem by using SARSA(<img src="https://latex.codecogs.com/svg.latex?\Large&space;\lambda" title="x" />) algorithm, for the value of parameter <img src="https://latex.codecogs.com/svg.latex?\Large&space;\lambda=0.9" title="x" />.  Assume that the policy followed by the agent is an <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon" title="x" />-greedy policy with <img src="https://latex.codecogs.com/svg.latex?\Large&space;\epsilon=0.1" title="x" />.
+Use 500,000 episodes.  Show the estimated action values for different states and policy. Discuss the results.
 
 
 ## P4 (max points 25)
