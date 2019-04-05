@@ -49,12 +49,11 @@ In all questions, use the number of episodes equal to `500,000`. For each questi
 
 ## P3 (max points 25)
 
-Consider a variant of the reinforcement learning problem which is identical to that in P1 but where the player does not incur a cost by 
-investing effort but can invest high effort if she has a sufficient energy. 
+Consider a variant of the reinforcement learning problem which is identical to that in P1 but where the player does not incur a cost by investing effort but can invest high effort if she has a sufficient energy. 
 
 The player starts with a given energy level <img src="https://latex.codecogs.com/svg.latex?\Large&space;B" title="x" /> which is decremented by <img src="https://latex.codecogs.com/svg.latex?\Large&space;c_H" title="x" />whenever in a round the player invests high effort. 
 If the energy level would become negative after subtracting the value of <img src="https://latex.codecogs.com/svg.latex?\Large&space;c_H" title="x" />, it is set equal to <img src="https://latex.codecogs.com/svg.latex?\Large&space;0" title="x" />. 
-In each round, an amount of energy of value <img src="https://latex.codecogs.com/svg.latex?\Large&space;a" title="x" /> is added to the player, independently with probability <img src="https://latex.codecogs.com/svg.latex?\Large&space;p" title="x" />. 
+In each round, an amount of energy of value <img src="https://latex.codecogs.com/svg.latex?\Large&space;a" title="x" /> is added to the player, independently with probability <img src="https://latex.codecogs.com/svg.latex?\Large&space;p" title="x" />.  The maximum energy level is B. 
 
 The player can invest high effort in a round only if her energy level is at least <img src="https://latex.codecogs.com/svg.latex?\Large&space;c_H" title="x" />.
 
